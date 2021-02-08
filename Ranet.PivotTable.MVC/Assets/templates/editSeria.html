@@ -1,0 +1,40 @@
+<div class="modal-header editSeria-notSelection">
+    <button type="button" id="btnX" ng-click="cancel()" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title">{{ 'EditSeriaWindow_Title' | translate }}</h4>
+</div>
+<div class="modal-body editSeria-body">
+    <div class="editSeria-field">
+        {{ 'EditExtensionWindow_ColumnIndex' | translate }}
+        <input type="number" class="form-control" ng-model="columnIndex" id="seriaIndex">
+    </div>
+    <div class="editSeria-field">
+        {{ 'EditExtensionWindow_DiagramType' | translate }}
+        <div class="btn-group default-dropdown editExtension-dropdown">
+            <button type="button" class="btn btn-default dropdown-toggle btn-toggle-withcarret" data-toggle="dropdown">{{ chartTypes[currentChartType] | translate }}</button>
+            <button type="button" class="btn btn-default dropdown-toggle caret-btn" data-toggle="dropdown" aria-expanded="false">
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li ng-repeat="chartType in chartTypes" ng-class="currentChartType===$index?'active':''" ng-click="setChartType($index)">
+                    <a>{{ chartType | translate }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="editSeria-checkbox checkbox" ng-class="disableAdditionalAxis || currentChartType === 5 ? 'disabled' : ''">
+        <label>
+            <input type="checkbox" ng-model="useAdditionalAxis">
+            {{ 'EditSeriaWindow_UseAdditionalAxis' | translate }}
+        </label>
+    </div>
+</div>
+<div class="modal-footer editSeria-notSelection">
+    <button class="btn btn-default" ng-click="ok()" ng-class="columnIndex === undefined ? 'disabled':'' ">
+        <span>{{ 'DialogButton_Ok' | translate }}</span>
+    </button>
+    <button class="btn btn-default" ng-click="cancel()">
+        <span>{{ 'DialogButton_Cancel' | translate }}</span>
+    </button>
+</div>

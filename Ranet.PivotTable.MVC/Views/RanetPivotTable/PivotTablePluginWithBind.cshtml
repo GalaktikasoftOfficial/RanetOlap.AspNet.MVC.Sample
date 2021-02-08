@@ -1,0 +1,37 @@
+﻿@using Ranet.Analytics.PivotGrid.Server.Mvc
+
+@{
+    Layout = "~/Views/Shared/_LayoutRanetPlugin.cshtml";
+    ViewBag.Title = "Ranet OLAP HTML PivotTable Plugin With Bind";
+}
+
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+<div class="RanetAnalyticsPivotGridWithBind">
+    @Html.RanetAnalytics().DynamicPivotGrid(pivotGrid =>
+{
+    pivotGrid.Id = "dynamicPivotGridControlWithBind";
+    pivotGrid.ConnectionString = "Provider=MSOLAP.4; Data Source=https://bi.galaktika-soft.com/olap/2012/msmdpump.dll; Catalog=AdventureWorksDW2012 MD-EE;";
+    pivotGrid.Locale = "en";
+    pivotGrid.DefaultPageId = "0";
+
+    pivotGrid.ApplicationUrl = "/";
+    pivotGrid.TemplatesPath = "/Assets/";
+
+    pivotGrid.Pages.Bind(ModelHelper.GetPages());
+
+}).GetHtml()
+</div>
+
+<style>
+    .RanetAnalyticsPivotGridWithBind {
+        border: 3px #eeeeee solid;
+    }
+
+    .modal-dialog {
+        left: 0 !important;
+    }
+</style>
+
+<link href="/Assets/vendors/bootstrap/bootstrap-metropolisTheme.min.css" rel="stylesheet" />

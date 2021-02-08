@@ -1,0 +1,18 @@
+<div class="modal-header">
+	<button type="button" id="btnX" ng-click="cancel()" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	<h4 class="modal-title">{{ 'ShowExceptionWindowTitle' | translate }}</h4>
+</div>
+<div class="modal-body">
+	<div class="form-horizontal">
+		<div class="form-group">
+			<div class="col-md-12">
+				<textarea class="form-control" style="-moz-resize: none; -ms-resize: none; -o-resize: none; height: 350px; resize: none; font-size: 12px;" rows="3" readonly required>{{exception}}</textarea>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-default" ng-click="cancel()">
+		<span>{{ 'DialogButton_Ok' | translate }}</span>
+	</button>
+</div>

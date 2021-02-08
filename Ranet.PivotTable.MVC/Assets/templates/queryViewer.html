@@ -1,0 +1,57 @@
+<div class="modal-header">
+	<button type="button" id="btnX" ng-click="cancel()" class="close" aria-label="Close">
+		<span aria-hidden="true">&times;</span></button>
+	<h4 class="modal-title">{{ 'DataSourceInfoDialog_Caption' | translate }}</h4>
+</div>
+<div class="modal-body">
+	<div class="form-horizontal">
+		<!--<div class="form-group">-->
+
+		<uib-tabset >
+			<uib-tab heading="{{ 'Query' | translate }}">
+				<div class="queryViewer_checkBoxPanel">
+					<input type="checkbox" ng-model="vm.useQueryAsDataSource" /><span class="queryViewer_checkBoxLabel">{{ 'QueryViewer_LabelQueryAsDataSource' | translate }}</span>
+				</div>
+				<div class="queryViewer_textPanel">
+					<textarea class="form-control queryViewer_textArea" rows="3"
+							  ng-readonly="vm.useQueryAsDataSource===false"					           
+							  spellcheck="false"
+							  ng-model="vm.mdxQuery"
+							  required></textarea>
+				</div>
+			</uib-tab>
+			<uib-tab heading="{{ 'Initial_Query' | translate }}">
+				<div class="queryViewer_textPanel">
+					<textarea class="form-control queryViewer_textArea" rows="3" readonly required>{{initialQuery}}</textarea>
+				</div>
+			</uib-tab>
+			<uib-tab heading="{{ 'QueryViewer_TabTitleUpdateScriptTemplate' | translate }}">
+				<div class="queryViewer_checkBoxPanel">
+					<input type="checkbox" ng-model="vmUpdateScriptTemplate.useCustomUpdateScriptTemplate" /><span class="queryViewer_checkBoxLabel">{{ 'QueryViewer_UseCustomUpdateScriptTemplate' | translate }}</span>
+				</div>
+				<div class="queryViewer_textPanel">
+					<textarea class="form-control queryViewer_textArea" rows="3"
+							  ng-readonly="vmUpdateScriptTemplate.useCustomUpdateScriptTemplate===false"
+							  spellcheck="false"
+							  ng-model="vmUpdateScriptTemplate.updateScriptTemplate"
+							  required></textarea>
+				</div>
+			</uib-tab>
+		</uib-tabset>
+
+
+		<!--<div class="col-md-12">
+			<textarea class="form-control" style="-moz-resize: none; -ms-resize: none; -o-resize: none; height: 350px; resize: none; font-size: 12px;" rows="3" readonly required>{{mdxQuery}}</textarea>
+		</div>-->
+		<!--</div>-->
+	</div>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-default" ng-click="ok()">
+		<span>{{ 'DialogButton_Ok' | translate }}</span>
+	</button>
+
+	<button class="btn btn-default" ng-click="cancel()">
+		<span>{{ 'DialogButton_Cancel' | translate }}</span>
+	</button>
+</div>

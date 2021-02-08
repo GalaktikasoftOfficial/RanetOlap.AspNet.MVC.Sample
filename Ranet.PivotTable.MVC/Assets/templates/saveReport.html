@@ -1,0 +1,81 @@
+<div class="modal-header saveReportView-noSelection">
+	<button type="button" id="btnX" ng-click="cancel()" class="close" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+	</button>
+	<h4 class="modal-title">{{ 'SaveAsDialog_Caption' | translate }}</h4>
+</div>
+<div class="modal-body saveReportView-noSelection saveReportView-rootLayout">
+	<div class="saveReportView-toolBar">
+		<button type="button" class="btn btn-default" title="{{ 'Createfolder' | translate }}"
+		        ng-click="addFolder()"
+		        ng-disabled="disableAddFolderButton">
+			<span>{{ 'Createfolder' | translate }}</span>
+		</button>
+		<button type="button" class="btn btn-default" title="{{ 'SaveReportView_EditFolder' | translate }}"
+		        ng-click="editItem()"
+		        ng-disabled="disableEditButton">
+			<span>{{ 'SaveReportView_EditFolder' | translate }}</span>
+		</button>
+	    <button type="button" class="btn btn-default" title="{{ 'Toolbar_DeleteButton_ToolTip' | translate }}"
+	            ng-click="deleteItem()"
+	            ng-disabled="disableDeleteButton">
+	        <span>{{ 'Toolbar_DeleteButton_ToolTip' | translate }}</span>
+	    </button>
+
+	    <button class="btn btn-default"
+	            ng-disabled="selectedItem.type !== 'report' && selectedItem.type!=='page'"
+	            ng-click="saveReport()" title="{{ 'Toolbar_ExportButton_ToolTip' | translate }}">
+	        <span>{{ 'Command_Export_Group' | translate }}</span>
+	    </button>
+
+	    <button class="btn btn-default" ng-click="showLoadReportWindow()"  title="{{ 'Toolbar_ImportButton_ToolTip' | translate }}">
+            <span>{{ 'Toolbar_ImportTextButton' | translate }}</span>
+	    </button>
+
+	</div>
+
+	<div data-ranet-search-tree-view
+		 data-datasource="datasource"
+		 data-onselectedchanged="onSelectedStorageItemChanged(e)"
+		 data-searchtreeoptions="searchTreeViewOptions"
+		 data-control="treeViewFacade"
+		 class="saveReportView-storageDescriptionTree"></div>
+
+	<div class="saveReportView-reportEditor">
+		<div>
+			<span>{{ 'ObjectDescriptionControl_Name' | translate }}</span>
+			<input type="text"
+			       ng-model="caption"
+			       class="form-control"
+			       ng-model-options="{updateOn: 'blur' }"/>
+		</div>
+		<div class="saveReportView-editorPanel">
+			<span>{{ 'ObjectDescriptionControl_Folder' | translate }}</span>
+			<div ranet-tree-lookup
+				 lookup-options="lookupOptions"
+				 lookup-selected-items="lookupSelected"
+				 lookup-data-source="treeFoldersLookupDataSource"></div>
+		</div>
+		<div class="saveReportView-editorPanel">
+			<span>{{ 'ObjectDescriptionControl_Index' | translate }}</span>
+			<input type="text"
+			       ng-model="index"
+			       class="form-control"
+			       ng-model-options="{updateOn: 'blur' }"/>
+		</div>
+		<div class="saveReportView-editorPanel">
+			<span>{{ 'ObjectDescriptionControl_Description' | translate }}</span>
+			<textarea class="form-control saveReportView-descriptionTextArea"
+			          ng-model="description"></textarea>
+		</div>
+	</div>
+
+</div>
+<div class="modal-footer saveReportView-noSelection">
+	<button class="btn btn-default" ng-click="save()">
+		<span>{{ 'DialogButton_Ok' | translate }}</span>
+	</button>
+	<button class="btn btn-default" ng-click="cancel()">
+		<span>{{ 'DialogButton_Cancel' | translate }}</span>
+	</button>
+</div>

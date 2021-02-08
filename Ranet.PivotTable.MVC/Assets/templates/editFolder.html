@@ -1,0 +1,27 @@
+<div class="modal-header editFolder-notSelection">
+	<button type="button" id="btnX" ng-click="cancel()" class="close" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+	</button>
+	<!--<h4 class="modal-title">{{windowTitle}}</h4>-->
+	<h4 class="modal-title">{{ 'Foldereditor' | translate }}</h4>
+</div>
+<div class="modal-body editFolder-notSelection">
+	<span class="editFolder-caption">{{ 'ObjectDescriptionControl_Name' | translate }}</span>
+	<input type="text"
+	       ng-model="caption"
+	       class="form-control"
+	       ng-model-options="{updateOn: 'blur' }"/>
+	<span>{{ 'ObjectDescriptionControl_Index' | translate }}</span>
+	<input type="text"
+		   ng-model="index"
+		   class="form-control"
+		   ng-model-options="{updateOn: 'blur' }" />
+</div>
+<div class="modal-footer editFolder-notSelection">
+	<button class="btn btn-default" ng-click="ok()">
+		<span>{{ 'DialogButton_Ok' | translate }}</span>
+	</button>
+	<button class="btn btn-default" ng-click="cancel()">
+		<span>{{ 'DialogButton_Cancel' | translate }}</span>
+	</button>
+</div>

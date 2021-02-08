@@ -1,0 +1,1 @@
+{"type":"Topology","arcs":[[[5294,9999],[4705,-5789],[-4705,-4210],[-5294,4210],[5294,5789]]],"transform":{"scale":[3.8363336334157765e-7,4.287666766665868e-7],"translate":[117.7518563810001,15.150082025000074]},"objects":{"SCR":{"type":"GeometryCollection","geometries":[{"type":"Polygon","properties":{"NAME":"Scarborough Reef","HASC_1":"-99","type":""},"arcs":[[0]]}]}}}

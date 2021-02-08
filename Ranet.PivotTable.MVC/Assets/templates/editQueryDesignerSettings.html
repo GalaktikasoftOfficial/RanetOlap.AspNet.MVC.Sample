@@ -1,0 +1,48 @@
+<div class="modal-header">
+	<button type="button" id="btnX" ng-click="cancel()" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	<h4 class="modal-title">{{ 'MDXDesigner_Dialog_Caption_Setting' | translate }}</h4>
+</div>
+<div class="modal-body editQueryDesignerSettings-contentPanel">
+	<!--<div>
+		<span class="editQueryDesignerSettings-labelCellSetCount">{{ 'MDXDesigner_Setting_CellSetCount' | translate }}</span>
+    <div class="editQueryDesignerSettings-textBoxCellSetCount_container">
+      <input type="number" class="editQueryDesignerSettings-textBoxCellSetCount form-control" ng-model="subsetCount">
+    </div>
+	</div>-->
+	<div>
+		<input type="checkbox" ng-model="useVisualTotals">
+		{{ 'MDXDesigner_Setting_UseVisualTotals' | translate }}
+	</div>
+	<div>
+		<input type="checkbox" ng-model="generateCustomCalculated">
+		{{ 'MDXDesigner_Setting_GenerateCustomCalculated' | translate }}
+	</div>
+	<div>
+		<input type="checkbox" ng-model="hideEmptyRows">
+		{{ 'MDXDesigner_Setting_VisibleEmptyRows' | translate }}
+	</div>
+	<div>
+		<input type="checkbox" ng-model="hideEmptyColumns">
+		{{ 'MDXDesigner_Setting_VisibleEmptyColumns' | translate }}
+	</div>
+	<div>
+		<input type="checkbox" ng-model="includeAllMembers">
+		{{ 'MDXDesigner_Setting_lbl_IncludeAllMembers' | translate }}
+	</div>
+	<div>
+		<input type="checkbox" ng-model="includeCustomCalculationsInDrillDown">
+		{{ 'MDXDesigner_Setting_lbl_UseCustomCalculationInDrillDown' | translate }}
+	</div>
+	<div class="editQueryDesignerSettings-loadStateFromHistoryPanel">
+		<input type="checkbox" ng-model="loadStateFromHistory">
+		{{ 'Settings_LoadStateFromHistory' | translate }}
+	</div>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-default" ng-click="ok()">
+		<span>{{ 'DialogButton_Ok' | translate }}</span>
+	</button>
+	<button class="btn btn-default" ng-click="cancel()">
+		<span>{{ 'DialogButton_Cancel' | translate }}</span>
+	</button>
+</div>

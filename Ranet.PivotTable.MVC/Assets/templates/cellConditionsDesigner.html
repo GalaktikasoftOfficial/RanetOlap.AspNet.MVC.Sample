@@ -1,0 +1,260 @@
+<div class="modal-header cellsConditionsDesigner-noSelection">
+    <button type="button" id="btnX" ng-click="cancel()" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title">{{ 'CellsConditionsDesignerDialog_Caption' | translate }}</h4>
+</div>
+<div class="modal-body cellsConditionsDesigner-body cellsConditionsDesigner-noSelection">
+    <div>
+        <button type="button" class="btn btn-default cellsConditionsDesigner-imageButton" title="{{ 'Toolbar_NewButton_ToolTip' | translate }}"
+                ng-click="addNewStyleDescriptor()">
+            <div class="cellsConditionsDesigner-imageButtonContent cellsConditionsDesigner-imageLibrary_new"></div>
+        </button>
+        <button type="button" class="btn btn-default cellsConditionsDesigner-imageButton" title="{{ 'Toolbar_DeleteButton_ToolTip' | translate }}"
+                ng-click="deleteSelectedDescriptor()"
+                ng-disabled="!currentDescriptor">
+            <div class="cellsConditionsDesigner-imageButtonContent cellsConditionsDesigner-imageLibrary_remove"></div>
+        </button>
+        <button type="button" class="btn btn-default cellsConditionsDesigner-imageButton" title="{{ 'Toolbar_DeleteAllButton_ToolTip' | translate }}"
+                ng-disabled="arrayDescriptors.length===0"
+                ng-click="deleteAllDescriptors()">
+            <div class="cellsConditionsDesigner-imageButtonContent cellsConditionsDesigner-imageLibrary_removeAll"></div>
+        </button>
+    </div>
+
+    <div class="col-xs-4">
+        <div class="row">
+            <ul class="list-group cellsConditionsDesigner-listStyles panel panel-default">
+                <li class="list-group-item cellConditionsDesigner-listItem"
+                    ng-repeat="conditionDescriptor in arrayDescriptors"
+                    ng-class="conditionDescriptor===currentDescriptor?'active':''"
+                    ng-click="setCurrentDescriptor(conditionDescriptor)">
+                    <span>{{conditionDescriptor.memberUniqueName}}</span>
+                </li>
+            </ul>
+
+            <div class="cellsConditionsDesigner-cubeExplorerPanel"
+                 data-cube-explorer
+                 data-connection="connection"
+                 data-cube-name="cubeName"
+                 data-cube-meta-data="cubeMetaData"></div>
+        </div>
+    </div>
+    <div class="col-xs-8" ng-class="!currentDescriptor?'cellConditionsDesigner-panelDisabled':''">
+        <div class="row cellConditionsDesigner-rowIndent">
+            <div>
+                {{ 'MemberUniqueName_Label' | translate }}
+            </div>
+
+            <input type="text"
+                   data-drag-and-drop-tree-metadata-to-text
+                   delete-prev-value="true"
+                   ng-change="onMemberUniqueChanged()"
+                   ng-model-options="{updateOn: 'blur'}"
+                   ng-model="textMemberUniqueName"
+                   class="form-control" />
+
+        </div>
+        <div class="row cellConditionsDesigner-rowIndent">
+
+            <button type="button" class="btn btn-default cellsConditionsDesigner-imageButton" title="{{ 'Toolbar_NewButton_ToolTip' | translate }}"
+                    ng-click="addCondition()">
+                <div class="cellsConditionsDesigner-imageButtonContent cellsConditionsDesigner-imageLibrary_new"></div>
+            </button>
+            <button type="button" class="btn btn-default cellsConditionsDesigner-imageButton" title="{{ 'Toolbar_DeleteButton_ToolTip' | translate }}"
+                    ng-click="deleteCurrentCondition()"
+                    ng-disabled="!currentCondition">
+                <div class="cellsConditionsDesigner-imageButtonContent cellsConditionsDesigner-imageLibrary_remove"></div>
+            </button>
+            <button type="button" class="btn btn-default cellsConditionsDesigner-imageButton" title="{{ 'Toolbar_DeleteAllButton_ToolTip' | translate }}"
+                    ng-disabled="currentDescriptor.conditions.length===0"
+                    ng-click="deleteAllConditions()">
+                <div class="cellsConditionsDesigner-imageButtonContent cellsConditionsDesigner-imageLibrary_removeAll"></div>
+            </button>
+            <ul class="list-group cellsConditionsDesigner-listConditions panel panel-default">
+                <li class="list-group-item cellConditionsDesigner-listItem"
+                    ng-click="setCondition(condition)"
+                    ng-class="condition===currentCondition?'active':''"
+                    ng-repeat="condition in currentDescriptor.conditions">
+                    <span ng-bind="getCaptionCondition(condition)"></span>
+                </li>
+            </ul>
+
+        </div>
+        <div class="row cellConditionsDesigner-rowIndent" ng-class="!currentCondition?'cellConditionsDesigner-panelDisabled':''">
+            <div>
+                <div class="cellsConditionsDesigner-valueConditionLabel">
+                    {{ 'ValueCondition_Label' | translate }}
+                </div>
+                <div class="cellConditionsDesigner-conditionsDropDown">
+                    <div class="dropdown btn-group dropDownControl default-dropdown">
+                        <button title="{{currentTypeCondition.caption}}"
+                                class="btn btn-default dropdown-toggle btn-toggle-withcarret dropDownControl-contentButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <div class="dropDownControl-imagePanel"
+                                 ng-class="currentTypeCondition.imageClass"></div>
+                            <span>{{currentTypeCondition.caption}}</span>
+                        </button>
+                        <button type="button" class="btn btn-default dropdown-toggle caret-btn dropDownControl-caretButton" data-toggle="dropdown" aria-expanded="false">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li ng-class="currentType===currentTypeCondition?'active':''"
+                                ng-click="setTypeCondition(currentType)"
+                                ng-repeat="currentType in typeConditions">
+                                <a>
+                                    <div class="dropDownControl-imagePanel" ng-class="currentType.imageClass"></div>
+                                    <span ng-bind="currentType.caption"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cellConditionsDesigner-conditionsEditorPanel">
+                    <div class="cellConditionsDesigner-textBoxPanel" ng-class="isVisibleSecondTextBox==false ? 'cellConditionsDesigner-textBox100Width':'cellConditionsDesigner-textBox40Width'">
+                        <input class="form-control" type="number" ng-model="currentCondition.value1">
+                    </div>
+                    <div class="cellConditionsDesigner-editorsSeparator" ng-show="isVisibleSecondTextBox">и</div>
+                    <div class="cellConditionsDesigner-textBoxPanel" ng-class="isVisibleSecondTextBox ? 'cellConditionsDesigner-textBox40Width':''" ng-show="isVisibleSecondTextBox">
+                        <input class="form-control" type="number" ng-model="currentCondition.value2">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row cellConditionsDesigner-rowIndent" ng-class="!currentCondition?'cellConditionsDesigner-panelDisabled':''">
+            <uib-accordion>
+                <div uib-accordion-group class="panel-default" heading="{{ 'CellConditionControl_AppearanceItem' | translate }}" is-open="openGroups.options">
+                    <div class="col-xs-6">
+                        <div>
+                            <input type="checkbox" class="cellConditionsDesigner-checkBox"
+                                   ng-model="currentCondition.appearance.options.showValue" />{{ 'ShowValue_Check' | translate }}
+                        </div>
+                        <div>
+                            <input type="checkbox" class="cellConditionsDesigner-checkBox"
+                                   ng-model="currentCondition.appearance.options.useImage" />{{ 'ShowImage_Check' | translate }}
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div>
+                            <input type="checkbox" class="cellConditionsDesigner-checkBox"
+                                   ng-model="currentCondition.appearance.options.useBackColor" />{{ 'UseBackColor_Check' | translate }}
+                        </div>
+                        <div>
+                            <input type="checkbox" class="cellConditionsDesigner-checkBox"
+                                   ng-model="currentCondition.appearance.options.useForeColor" />{{ 'UseForeColor_Check' | translate }}
+                        </div>
+                    </div>
+                </div>
+                <div uib-accordion-group class="panel-default" heading="{{ 'ConditionsDesigner_Appearance_Label' | translate }}" is-open="openGroups.appearance">
+
+                    <div class="col-xs-6">
+                        <div>{{ 'BackColor_Label' | translate }}</div>
+                        <div colorpicker data-refobject="cellColors" data-prop="backColor" data-preconfigured-colors="preconfiguredColors"></div>
+                    </div>
+                    
+                    <div class="col-xs-6">
+                        <div>{{ 'ForeColor_Label' | translate }}</div>
+                        <div colorpicker data-refobject="cellColors" data-prop="foreColor" data-preconfigured-colors="preconfiguredColors"></div>
+                    </div>
+
+                </div>
+                <!--<accordion-group heading="{{ 'CellConditionControl_ProgressBarItem' | translate }}">
+                    Hello This content is straight in the template. This content is straight in the template. This content is straight in the template. This content is straight in the template. This content is straight in the template. This content is straight in the template. This content is straight in the template. This content is straight in the template. This content is straight in the template. This content is straight in the template. This content is straight in the template.
+                </accordion-group>-->
+                <div uib-accordion-group class="panel-default" heading="{{ 'CellConditionControl_ImageItem' | translate }}" is-open="openGroups.imageEditor">
+                    <div class="col-xs-6">
+                        <div>{{ 'Image_Label' | translate }}</div>
+
+                        <div class="dropdown btn-group default-dropdown cellConditionsDesigner-colorsPanel">
+                            <button class="btn btn-default dropdown-toggle btn-toggle-withcarret"
+                                    type="button"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="true">
+                                <div class="dropDownControl-imagePanel" ng-class="getImageDescription().imageClass"></div>
+                                <span ng-bind="getImageDescription().caption"></span>
+                            </button>
+                            <button type="button" class="btn btn-default dropdown-toggle caret-btn" data-toggle="dropdown" aria-expanded="false">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu cellConditionsDesigner-scrollableDropDown" aria-labelledby="dropdownMenu1">
+                                <li ng-repeat="imageDescription in imageDescriptions"
+                                    ng-class="imageDescription.imageClass===currentCondition.appearance.cssClassImage?'active':''"
+                                    ng-click="setImageCondition(imageDescription)">
+                                    <a>
+                                        <div class="dropDownControl-imagePanel" ng-class="imageDescription.imageClass"></div>
+                                        <span>{{imageDescription.caption}}</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div uib-accordion-group class="panel-default" heading="{{ 'CellConditionControl_SparklineItem' | translate }}" is-open="openGroups.sparklineEditor">
+                    <div class="col-xs-6">
+                        <div>{{ 'Sparkline_base_color' | translate }}</div>
+                        <div colorpicker data-refobject="sparkLineColors" data-prop="baseColor" data-preconfigured-colors="preconfiguredColors"></div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div>{{ 'Sparkline_start_color' | translate }}</div>
+                        <div colorpicker data-refobject="sparkLineColors"  data-prop="firstColor" data-preconfigured-colors="preconfiguredColors"></div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div>{{ 'Sparkline_end_color' | translate }}</div>
+                        <div colorpicker data-refobject="sparkLineColors" data-prop="lastColor" data-preconfigured-colors="preconfiguredColors"></div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div>{{ 'Sparkline_max_color' | translate }}</div>
+                        <div colorpicker data-refobject="sparkLineColors" data-prop="maxColor" data-preconfigured-colors="preconfiguredColors"></div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div>{{ 'Sparkline_min_color' | translate }}</div>
+                        <div colorpicker data-refobject="sparkLineColors" data-prop="minColor" data-preconfigured-colors="preconfiguredColors"></div>
+                    </div>
+
+                    <div class="col-xs-6">
+                        <div>{{ "Sparkiline_Type_Label" | translate }}</div>
+                        <div class="dropdown btn-group default-dropdown cellConditionsDesigner-dropdownPanel">
+                            <button title="{{ sparklineTypes[currentSparklineType || 0] }}"
+                                    class="btn btn-default dropdown-toggle btn-toggle-withcarret dropDownControl-contentButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <span>{{ sparklineTypes[currentSparklineType || 0] }}</span>
+                            </button>
+                            <button type="button" class="btn btn-default dropdown-toggle caret-btn dropDownControl-caretButton" data-toggle="dropdown" aria-expanded="false">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li ng-class="$index===currentSparklineType ? 'active':''"
+                                    ng-click="setSparklineType($index)"
+                                    ng-repeat="currentType in sparklineTypes">
+                                    <a>
+                                        <span>{{ currentType }}</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-6 cellConditionsDesigner-sparklinesCheckbox">
+                        <input type="checkbox" ng-change="setSparklineTooltip(enableSparklineTooltip)" class="cellConditionsDesigner-checkBox"
+                               ng-model="enableSparklineTooltip" />{{ 'EnableTooltip_Check' | translate }}
+                    </div>
+                    <div class="col-xs-6 cellConditionsDesigner-sparklinesCheckbox">
+                        <input type="checkbox" ng-change="setSparklineMinMax(showMinMax)" class="cellConditionsDesigner-checkBox"
+                               ng-model="showMinMax" />{{ 'ShowMinMax_Check' | translate }}
+                    </div>
+                </div>
+            </uib-accordion>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal-footer cellsConditionsDesigner-noSelection">
+    <button class="btn btn-default" ng-click="ok()">
+        <span>{{ 'DialogButton_Ok' | translate }}</span>
+    </button>
+    <button class="btn btn-default" ng-click="cancel()">
+        <span>{{ 'DialogButton_Cancel' | translate }}</span>
+    </button>
+</div>

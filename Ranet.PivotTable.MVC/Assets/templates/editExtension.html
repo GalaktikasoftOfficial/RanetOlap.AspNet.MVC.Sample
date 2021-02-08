@@ -1,0 +1,365 @@
+<div class="modal-header editExtension-notSelection">
+    <button type="button" id="btnX" ng-click="cancel()" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title">{{ 'EditExtensionWindow_Title' | translate }}</h4>
+</div>
+
+<div class="modal-body editExtension-body editExtension-notSelection container-fluid">
+    <!-- Upper navigation panel -->
+    <div class="navbar navbar-default container-fluid">
+        <button class="btn btn-default editExtension-imageButton" ng-class="settingsMode === 'General' ? 'active' : ''" ng-click="setSettingsMode('General')">
+            <span class="editExtension-imageButtonContent editExtension-imageLibrary-General" title="{{ 'Extension_GeneralOptions' | translate }}"></span>
+            <span class="editExtension-buttonTitle" ng-bind-html="'Extension_GeneralOptions' | translate | splitWords">
+            </span>
+        </button><!--
+     --><button class="btn btn-default editExtension-imageButton" ng-class="!(extensionType === 'Chart' && layout) ? 'disabled' : (settingsMode === 'Chart') ?  'active' : ''" ng-click="setSettingsMode('Chart')">
+            <span class="editExtension-imageButtonContent editExtension-imageLibrary-Chart" title="{{ 'Extension_ChartOptions' | translate }}"></span>
+            <span class="editExtension-buttonTitle" ng-bind-html="'Extension_ChartOptions' | translate | splitWords">
+            </span>
+        </button><!--
+     --><button class="btn btn-default editExtension-imageButton" ng-class="!(extensionType === 'VectorMap' && layout) ? 'disabled' : (settingsMode === 'VectorMap') ?  'active' : ''" ng-click="setSettingsMode('VectorMap')">
+            <span class="editExtension-imageButtonContent editExtension-imageLibrary-VectorMap" title="{{ 'Extension_VectorMapOptions' | translate }}"></span>
+            <span class="editExtension-buttonTitle" ng-bind-html="'Extension_VectorMapOptions' | translate | splitWords">
+            </span>
+        </button>
+    </div>
+    <!-- Upper navigation panel -->
+
+
+    <div class="row row-eq-height">
+        <!--<div class="col-sm-1 navbar navbar-default sidemenu" ng-show="settingsMode !== 'General'">
+            <button class="btn btn-default editExtension-imageButton" ng-show="settingsMode === 'Chart'" ng-class="innerSettings === 'Series' ? 'active' : ''" ng-click="setInnerSettings('Series')">
+                <span class="editExtension-imageButtonContent editExtension-imageLibrary-Series" title="{{ 'Extension_SeriesOptions' | translate | splitWords }}"></span>
+                <span class="editExtension-buttonTitle" ng-bind-html="'Extension_SeriesOptions' | translate | splitWords"></span>
+            </button>
+            <button class="btn btn-default editExtension-imageButton" ng-show="settingsMode !== 'Chart' || currentChartType !== 5" ng-class="innerSettings === 'General' ? 'active' : ''" ng-click="setInnerSettings('General')">
+                <span class="editExtension-imageButtonContent editExtension-imageLibrary-Common" title="{{ 'Extension_CommonOptions' | translate | splitWords }}"></span>
+                <span class="editExtension-buttonTitle" ng-bind-html="'Extension_CommonOptions' | translate | splitWords">
+
+                </span>
+            </button>
+            <button class="btn btn-default editExtension-imageButton" ng-show="settingsMode === 'Chart' && currentChartType === 5" ng-class="innerSettings === 'PieSettings' ? 'active' : ''" ng-click="setInnerSettings('PieSettings')">
+                <span class="editExtension-imageButtonContent editExtension-imageLibrary-PieSettings" title="{{ 'Extension_PieOptions' | translate | splitWords }}"></span>
+                <span class="editExtension-buttonTitle" ng-bind-html="'Extension_PieOptions' | translate | splitWords"></span>
+            </button>
+            <button class="btn btn-default editExtension-imageButton" ng-show="settingsMode === 'Chart' && currentChartType === 5" ng-class="innerSettings === 'PieSeries' ? 'active' : ''" ng-click="setInnerSettings('PieSeries')">
+                <span class="editExtension-imageButtonContent editExtension-imageLibrary-PieSeries" title="{{ 'Extension_PieSeriesOptions' | translate | splitWords }}"></span>
+                <span class="editExtension-buttonTitle" ng-bind-html="'Extension_PieSeriesOptions' | translate | splitWords"></span>
+            </button>
+        </div>
+        <div class="col-sm-1 navbar navbar-default sidemenu" ng-show="settingsMode === 'General'">
+            <button class="btn btn-default editExtension-imageButton active">
+                <span class="editExtension-imageButtonContent editExtension-imageLibrary-Common" title="{{ 'Extension_CommonOptions' | translate | splitWords }}"></span>
+                <span class="editExtension-buttonTitle" ng-bind-html="'Extension_CommonOptions' | translate | splitWords"></span>
+            </button>
+        </div>-->
+        <div class="col-sm-1 navbar navbar-default sidemenu" ng-show="settingsMode !== 'General'">
+            <button class="btn btn-default editExtension-imageButton" ng-show="settingsMode === 'Chart'" ng-class="innerSettings === 'Series' ? 'active' : ''" ng-click="setInnerSettings('Series')">
+                <span class="editExtension-imageButtonContent editExtension-imageLibrary-Series" title="{{ 'Extension_SeriesOptions' | translate | splitWords }}"></span>
+                <span class="editExtension-buttonTitle" ng-bind-html="'Extension_SeriesOptions' | translate | splitWords"></span>
+            </button>
+            <button class="btn btn-default editExtension-imageButton" ng-show="settingsMode !== 'Chart' || seriesContainsChart()" ng-class="innerSettings === 'General' ? 'active' : ''" ng-click="setInnerSettings('General')">
+                <span class="editExtension-imageButtonContent editExtension-imageLibrary-Common" title="{{ 'Extension_CommonOptions' | translate | splitWords }}"></span>
+                <span class="editExtension-buttonTitle" ng-bind-html="'Extension_CommonOptions' | translate | splitWords">
+
+                </span>
+            </button>
+            <button class="btn btn-default editExtension-imageButton" ng-show="settingsMode === 'Chart' && seriesContainsPie()" ng-class="innerSettings === 'PieSettings' ? 'active' : ''" ng-click="setInnerSettings('PieSettings')">
+                <span class="editExtension-imageButtonContent editExtension-imageLibrary-PieSettings" title="{{ 'Extension_PieOptions' | translate | splitWords }}"></span>
+                <span class="editExtension-buttonTitle" ng-bind-html="'Extension_PieOptions' | translate | splitWords"></span>
+            </button>
+            <button class="btn btn-default editExtension-imageButton" ng-show="false" ng-class="innerSettings === 'PieSeries' ? 'active' : ''" ng-click="setInnerSettings('PieSeries')">
+                <span class="editExtension-imageButtonContent editExtension-imageLibrary-PieSeries" title="{{ 'Extension_PieSeriesOptions' | translate | splitWords }}"></span>
+                <span class="editExtension-buttonTitle" ng-bind-html="'Extension_PieSeriesOptions' | translate | splitWords"></span>
+            </button>
+        </div>
+        <div class="col-sm-1 navbar navbar-default sidemenu" ng-show="settingsMode === 'General'">
+            <button class="btn btn-default editExtension-imageButton active">
+                <span class="editExtension-imageButtonContent editExtension-imageLibrary-Common" title="{{ 'Extension_CommonOptions' | translate | splitWords }}"></span>
+                <span class="editExtension-buttonTitle" ng-bind-html="'Extension_CommonOptions' | translate | splitWords"></span>
+            </button>
+        </div>
+        <div class="col-sm-10">
+            <div ng-show="settingsMode === 'General'">
+                <!-- Extension type area -->
+                <div class="input-group">
+                    <h5>{{ 'Extension_ExtensionType' | translate }}</h5>
+                    <div class="btn-group">
+                        <span class="btn btn-default editExtension-radio_inline">
+                            <label>
+                                <input type="radio" name="extensionType" ng-model="extensionType" value="Chart">
+                                <span>
+                                    <span class="editExtension-imageButtonContent editExtension-imageLibrary-Chart"></span>
+                                    <span class="editExtension-buttonTitle">{{ 'Chart_Extension' | translate}}</span>
+                                </span>
+                            </label>
+                        </span>
+                        <span class="btn btn-default" ng-class="checkVectorMapCompatible() ? 'editExtension-radio_inline':'disabled editExtension-radio_inline'">
+                            <label>
+                                <input type="radio" name="extensionType" ng-model="extensionType" value="VectorMap">
+                                <span>
+                                    <span class="editExtension-imageButtonContent editExtension-imageLibrary-VectorMap"></span>
+                                    <span class="editExtension-buttonTitle">{{ 'VectorMap_Extension' | translate}}</span>
+                                </span>
+                            </label>
+                        </span>
+                    </div>
+                    <!--<span class=" editExtension-radio_inline">
+                        <label>
+                            <input type="radio" name="extensionType" ng-model="extensionType" value="Chart">
+                            <span class="editExtension-imageButtonContent editExtension-imageLibrary-Chart" title="{{ 'Chart_Extension' | translate }}"></span>
+                        </label>
+                    </span>
+
+                    <span ng-class="checkVectorMapCompatible() ? 'editExtension-radio_inline':'disabled editExtension-radio_inline' ">
+                        <label>
+                            <input ng-readonly="checkVectorMapCompatible()" type="radio" name="extensionType" ng-model="extensionType" value="VectorMap">
+                            <span class="editExtension-imageButtonContent editExtension-imageLibrary-VectorMap" title="{{ 'VectorMap_Extension' | translate}}"></span>
+                        </label>
+                    </span>-->
+                </div>
+                <!-- Extension type area -->
+                <!-- Palette area -->
+                <div ng-show="extensionType!=='VectorMap'">
+                    <h5>{{ "EditExtensionWindow_Palette" | translate}}:</h5>
+                    <div class="btn-group default-dropdown editExtension-dropdown">
+                        <button type="button" class="btn btn-default dropdown-toggle btn-toggle-withcarret" data-toggle="dropdown">
+                            {{ ('Palette_' + currentPalette.name.toLowerCase()) | translate }}
+                            <div class="pull-right">
+                                <div class="editExtension-paletteView-colorSquare" ng-repeat="color in currentPalette.colors" ng-style="{'background-color' : color}"></div>
+                            </div>
+                        </button>
+                        <button type="button" class="btn btn-default dropdown-toggle caret-btn" data-toggle="dropdown" aria-expanded="false">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li ng-repeat="palette in palettes" ng-class="palette===currentPalette ? 'active':''" ng-click="setPalette(palette)">
+                                <a>
+                                    <div class="editExtension-paletteView-colorLine pull-right">
+                                        <div class="editExtension-paletteView-colorSquare " ng-repeat="color in palette.colors" ng-style="{'background-color' : color}"></div>
+                                    </div>
+                                    <div class="editExtension-paletteView-label">{{ ('Palette_' + palette.name.toLowerCase()) | translate }}</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Palette area -->
+                <!-- Extension position area -->
+                <div>
+                    <h5>{{ 'EditExtensionWindow_ExtensionPosition' | translate }}</h5>
+                    <div class="btn-group">
+                        <span class="btn btn-default editExtension-radio_inline" ng-repeat="layoutMode in layoutModes" title="{{ layoutMode | translate }}">
+                            <label>
+                                <input type="radio" name="layout" ng-model="$parent.layout" ng-value="$index">
+                                <span>
+                                    <span class="editExtension-imageButtonContent" ng-class="'editExtension-imageLibrary-' + layoutMode"></span>
+                                    <span class="editExtension-buttonTitle">{{layoutMode | translate}}</span>
+                                </span>
+                            </label>
+                        </span>
+                    </div>
+                </div>
+                <!-- Extension position area -->
+            </div>
+            <div ng-show="settingsMode === 'Chart' && innerSettings === 'Series'">
+                <!-- Series area -->
+                <div ng-class="!layout ? 'disabled':'' " ng-show="extensionType==='Chart'">
+                    <div class="editExtension-seriesSettings">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="autogenerateSeries" ng-change="checkDisabled('autogenerateSeries')">
+                                {{ 'EditExtensionWindow_Autogeneration' | translate }}
+                            </label>
+                        </div>
+                        <div ng-show="autogenerateSeries">
+                            <h5>
+                                {{ 'EditExtensionWindow_AutogenerationChartType' | translate }}
+                            </h5>
+                            <div class="btn-group">
+                                <span class="btn btn-default editExtension-radio_inline" ng-repeat="chartType in chartTypes" title="{{chartType | translate}}">
+                                    <label>
+                                        <input type="radio" name="currentChartType" ng-model="$parent.currentChartType" ng-value="$index" ng-change="changeChartType($index)">
+                                        <span>
+                                            <span class="editExtension-imageButtonContent" ng-class="'editExtension-imageLibrary-' + chartType"></span>
+                                            <span class="editExtension-buttonTitle">{{chartType | translate}}</span>
+                                        </span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="editExtension-seriesPanel" ng-show="!autogenerateSeries">
+                            <button type="button" class="btn btn-default" ng-click="addSeria()"> {{ 'EditExtensionWindow_Add' | translate }}</button>
+                            <button type="button" class="btn btn-default" ng-class="!selectedSeria ? 'disabled':'' " ng-click="deleteSeria()"> {{ 'EditExtensionWindow_Delete' | translate }}</button>
+                            <button type="button" class="btn btn-default" ng-class="!selectedSeria ? 'disabled':'' " ng-click="editSeria()"> {{ 'EditExtensionWindow_Edit' | translate }}</button>
+                            <button type="button" class="btn btn-default" ng-if="useMultipleCharts" ng-class="!selectedSeria ? 'disabled':'' " ng-click="editSeriaSettings()"> {{ 'EditExtensionWindow_EditSettings' | translate }}</button>
+                            <ul class="list-group editExtension-seriesList panel panel-default">
+                                <li ng-repeat="seria in series" class="editExtension-seria list-group-item" ng-class="selectedSeria === seria ? 'active':'' " ng-click="selectSeria(seria)">
+                                    <div class="pull-right" ng-class="'editExtension-imageButtonContent editExtension-imageLibrary-' + chartTypes[seria.diagramType]" title="{{ chartTypes[seria.diagramType] | translate }}"></div>
+                                    <div>{{ 'EditExtensionWindow_ColumnIndex' | translate }} {{ seria.columnIndex }}</div>
+                                    <div>{{ 'EditExtensionWindow_DiagramType' | translate }} {{ chartTypes[seria.diagramType] | translate }}</div>
+                                    <div ng-if="seria.useAdditionalAxis">{{ 'EditExtensionWindow_UsingAdditionalAxis' | translate }}</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Series area -->
+                <!-- Table settings area -->
+                <div ng-class="!layout ? 'disabled':'' " ng-show="extensionType==='Chart'" class="editExtension-tableSettings">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="useMultipleCharts" ng-change="checkDisabled('useMultipleCharts')" ng-disabled="shouldUseTable()">
+                            {{ 'EditExtensionWindow_UseMultipleCharts' | translate }}
+                        </label>
+                    </div>
+                    <ranet-multi-chart-table data-max-col-number="4" data-max-row-number="4" data-col-length="multipleRows" data-row-length="multipleColumns" ng-show="useMultipleCharts"></ranet-multi-chart-table>
+                </div>
+                <!-- Table settings area -->
+            </div>
+            <div ng-show="settingsMode === 'Chart' && innerSettings === 'General'">
+                <div class="editExtension-legendPanel">
+                    <div>
+                        <h5>{{ 'EditExtensionWindow_LegendPosition' | translate }}</h5>
+                        <div class="btn-group">
+                            <span class="btn btn-default editExtension-radio_inline" ng-repeat="legendType in legendTypes" title="{{legendType | translate}}">
+                                <label>
+                                    <input type="radio" name="currentLegendType" ng-model="$parent.currentLegendType" ng-value="$index" ng-change="setLegend($index)">
+                                    <span>
+                                        <span class="editExtension-imageButtonContent" ng-class="'editExtension-imageLibrary-' + legendType"></span>
+                                        <span class="editExtension-buttonTitle">{{legendType | translate}}</span>
+                                    </span>
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="currentArgumentVisibility" ng-change="checkDisabled('currentArgumentVisibility')" ng-click="fixIsolateScope('currentArgumentVisibility', currentArgumentVisibility)">
+                        {{ 'EditExtensionWindow_ShowArgument' | translate }}
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="swapAxes" ng-change="checkDisabled('swapAxes')" ng-click="fixIsolateScope('swapAxes', swapAxes)">
+                        {{ 'EditExtensionWindow_SwapAxes' | translate }}
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="currentTooltipVisibility" ng-change="checkDisabled('currentTooltipVisibility')" ng-click="fixIsolateScope('currentTooltipVisibility', currentTooltipVisibility)">
+                        {{ 'EditExtensionWindow_ShowTooltip' | translate }}
+                    </label>
+                </div>
+                <div class="editExtension-cellNumber-field">
+                    <h5>{{ 'EditExtensionWindow_CellNumber' | translate }}</h5>
+                    <input type="number" class="form-control" ng-model="cellNumber" ng-click="fixIsolateScope('cellNumber', cellNumber)">
+                </div>
+            </div>
+            <div ng-show="settingsMode === 'VectorMap' && innerSettings === 'General'">
+                <!-- Vector map settings area -->
+                <div ng-class="rows.length === 0 ? 'disabled': ''">
+                    <h5>{{ 'EditExtensionWindow_RowSelection' | translate }}</h5>
+                    <div class="btn-group default-dropdown editExtension-dropdown" ng-show="currentPage? true: false">
+                        <button type="button" class="btn btn-default dropdown-toggle btn-toggle-withcarret" data-toggle="dropdown">{{ currentRow }}</button>
+                        <button type="button" class="btn btn-default dropdown-toggle caret-btn" data-toggle="dropdown" aria-expanded="false">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu editExtension-dropdown-menu" role="menu">
+                            <li ng-repeat="row in rows track by $index" ng-class="currentRow===row?'active':''" ng-click="changeRow(row)">
+                                <a>{{ row }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div ng-class="columns.length === 0 ? 'disabled': ''">
+                    <h5>{{ 'EditExtensionWindow_ColumnSelection' | translate }}</h5>
+                    <div class="btn-group default-dropdown editExtension-dropdown " ng-show="currentPage? true: false">
+                        <button type="button" class="btn btn-default dropdown-toggle btn-toggle-withcarret" data-toggle="dropdown">{{ columns[currentColumn] }}</button>
+                        <button type="button" class="btn btn-default dropdown-toggle caret-btn" data-toggle="dropdown" aria-expanded="false">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu editExtension-dropdown-menu" role="menu">
+                            <li ng-repeat="column in columns track by $index" ng-class="columns[currentColumn]===column?'active':''" ng-click="changeColumn($index)">
+                                <a>{{ column }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h5>{{ 'EditExtensionWindow_MainColor' | translate }}</h5>
+                <div colorpicker data-refobject="vectorMapSettings" data-prop="mainColor" data-preconfigured-colors="preconfiguredColors"></div>
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="detalization" ng-change="checkDisabled('detalization')">
+                        {{ 'EditExtensionWindow_Detalization' | translate }}
+                    </label>
+                </div>
+                <!-- Vector map settings area -->
+            </div>
+            <div ng-show="settingsMode === 'Chart' && innerSettings === 'PieSettings'">
+                <h5>{{ 'Extension_PieOptions' | translate }}:</h5>
+                <span>{{ 'EditExtensionWindow_InnerLabelType' | translate }}</span>
+                <div class="btn-group default-dropdown editExtension-dropdown " ng-show="currentPage? true: false">
+                    <button type="button" class="btn btn-default dropdown-toggle btn-toggle-withcarret" data-toggle="dropdown">{{ labelNames[currentInnerLabelType] | translate }}</button>
+                    <button type="button" class="btn btn-default dropdown-toggle caret-btn" data-toggle="dropdown" aria-expanded="false">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu editExtension-dropdown-menu" role="menu">
+                        <li ng-repeat="innerLabelType in labelTypes" ng-class="innerLabelType===currentInnerLabelType?'active':''" ng-click="changeInnerLabelType(innerLabelType)">
+                            <a>{{ labelNames[innerLabelType] | translate }}</a>
+                        </li>
+                    </ul>
+                </div>
+                <span>{{ 'EditExtensionWindow_OuterLabelType' | translate }}</span>
+                <div class="btn-group default-dropdown editExtension-dropdown " ng-show="currentPage? true: false">
+                    <button type="button" class="btn btn-default dropdown-toggle btn-toggle-withcarret" data-toggle="dropdown">{{ labelNames[currentOuterLabelType] | translate }}</button>
+                    <button type="button" class="btn btn-default dropdown-toggle caret-btn" data-toggle="dropdown" aria-expanded="false">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu editExtension-dropdown-menu" role="menu">
+                        <li ng-repeat="outerLabelType in labelTypes" ng-class="outerLabelType===currentOuterLabelType?'active':''" ng-click="changeOuterLabelType(outerLabelType)">
+                            <a>{{ labelNames[outerLabelType] | translate }}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="displayTooltips" ng-click="fixIsolateScope('displayTooltips', displayTooltips)">
+                        {{ 'EditExtensionWindow_ShowTooltip' | translate }}
+                    </label>
+                </div>
+                <div class="editExtension-legendPanel">
+                    <div>
+                        <h5>{{ 'EditExtensionWindow_LegendPosition' | translate }}</h5>
+                        <div class="btn-group">
+                            <span class="btn btn-default editExtension-radio_inline" ng-repeat="legendType in legendTypes" title="{{legendType | translate}}">
+                                <label>
+                                    <input type="radio" name="currentPieLegendType" ng-model="$parent.currentPieLegendType" ng-value="$index" ng-change="setPieLegend($index)">
+                                    <span>
+                                        <span class="editExtension-imageButtonContent" ng-class="'editExtension-imageLibrary-' + legendType"></span>
+                                        <span class="editExtension-buttonTitle">{{legendType | translate}}</span>
+                                    </span>
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer editExtension-notSelection">
+    <button class="btn btn-default" ng-click="ok()">
+        <span>{{ 'DialogButton_Ok' | translate }}</span>
+    </button>
+    <button class="btn btn-default" ng-click="cancel()">
+        <span>{{ 'DialogButton_Cancel' | translate }}</span>
+    </button>
+</div>

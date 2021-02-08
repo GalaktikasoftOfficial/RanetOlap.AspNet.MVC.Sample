@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutRanetControl.cshtml";
+    ViewBag.Title = "Ranet OLAP HTML PivotTable Control";
+}
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+<div class="PivotGridContent">
+    <div class="DynamicPivotGrid">
+        <ranetdynamicpivotgridapp ng-app="sampleDynamicPivotGrid"></ranetdynamicpivotgridapp>
+    </div>
+</div>
+
+<style>
+    .PivotGridContent {
+        border: 3px #eeeeee solid;
+        height: 550px;
+    }
+
+    .DynamicPivotGrid {
+        height: 100%;
+    }
+
+    .modal-dialog {
+        left: 0 !important;
+    }
+</style>
+
+<link href="/Assets/vendors/bootstrap/bootstrap-metropolisTheme.min.css" rel="stylesheet" />

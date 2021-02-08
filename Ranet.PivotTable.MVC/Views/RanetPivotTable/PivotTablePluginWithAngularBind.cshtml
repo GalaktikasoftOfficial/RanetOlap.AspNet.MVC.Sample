@@ -1,0 +1,55 @@
+﻿@using Ranet.Analytics.PivotGrid.Server.Mvc
+
+@{
+    Layout = "~/Views/Shared/_LayoutRanetPluginFullscreen.cshtml";
+    ViewBag.Title = "Ranet OLAP HTML PivotTable Plugin With Angular";
+    
+    var applicationId = "dynamicPivotGridControlWithAngular";
+    DynamicPivotGridPageCollection pageCollection = new DynamicPivotGridPageCollection();
+    pageCollection.Bind( ModelHelper.GetPages() );
+    var pageDescription = pageCollection.GetPageById("0");
+    var pageDescriptionString = DynamicPivotGridHelper.GetPage(pageDescription);
+}
+
+@Html.RanetAnalytics().DynamicPivotGridWithAngular(pivotGrid =>
+{
+    pivotGrid.ControlId = applicationId;
+}).GetHtml()
+
+<script>
+    parent.addEventListener("message", function (event) {
+        if (event.data === "Loaded") {
+            onloadPivotGrid();
+        }
+    });
+
+    var onloadPivotGrid = function () {
+        var injector = window.angular.element(document.getElementById("@applicationId")).injector();
+        var apiSpa = injector.get('ranetAngularInstance');
+
+        var page = @(new HtmlString( pageDescriptionString ) );
+        apiSpa.addNewPage(page);
+    };
+</script>
+
+<style>
+    .RanetAnalyticsPivotGridWithBind {
+        border: 3px #eeeeee solid;
+        height: 100%;
+    }
+
+    .modal-dialog {
+        left: 0 !important;
+    }
+
+    html, body {
+        height: 100%;
+        width: 100%;
+    }
+
+    body > .container-fluid {
+        height: calc(100% - 120px);
+    }
+</style>
+
+<link href="/Assets/vendors/bootstrap/bootstrap-metropolisTheme.min.css" rel="stylesheet" />

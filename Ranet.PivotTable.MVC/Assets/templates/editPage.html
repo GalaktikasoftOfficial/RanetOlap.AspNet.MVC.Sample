@@ -1,0 +1,33 @@
+<div class="modal-header editPage-notSelection">
+	<button type="button" id="btnX" ng-click="cancel()" class="close" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+	</button>
+	<h4 class="modal-title">{{ 'EditPageWindow_Title' | translate }}</h4>
+	<!--<h4 class="modal-title">{{windowTitle}}</h4>-->
+</div>
+<div class="modal-body editPage-body editPage-notSelection">
+	<span class="editPage-caption">{{ 'ObjectDescriptionControl_Name' | translate }}</span>
+	<input type="text"
+		   ng-model="caption"
+		   class="form-control" />
+
+	<span class="editPage-caption">{{ 'CubeName_PropertyDesc' | translate }}</span>
+	<input type="text"
+		   ng-show="!isEnabledEditCube"
+		   ng-readonly="true"
+		   ng-model="cubeName"
+		   class="form-control" />
+	<div data-cube-choice-control
+		 data-oncubeselectedchanged="onCubeSelectedItemChanged(e)"
+		 ng-show="isEnabledEditCube"
+		 data-connection="{{connection}}"></div>
+
+</div>
+<div class="modal-footer editPage-notSelection">
+	<button class="btn btn-default" ng-click="ok()">
+		<span>{{ 'DialogButton_Ok' | translate }}</span>
+	</button>
+	<button class="btn btn-default" ng-click="cancel()">
+		<span>{{ 'DialogButton_Cancel' | translate }}</span>
+	</button>
+</div>

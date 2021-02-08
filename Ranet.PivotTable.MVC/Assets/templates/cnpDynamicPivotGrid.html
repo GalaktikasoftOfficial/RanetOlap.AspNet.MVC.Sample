@@ -1,0 +1,338 @@
+<div class="appRootLayout dynamicPivotGrid">
+    <!--DynamicPivotGrid-->
+    <div data-ranet-dynamic-pivotgrid
+         ng-show="isShowContent"
+         data-oncreaterefcontrol="onCreateRefControl(referenceControl)"
+         data-pathresource="{{pathResource}}"
+         data-defaultcountloadedmembers="{{defaultCountLoadedMembers}}"
+         data-applicationurl="{{applicationUrl}}"
+         class="appDynamicPivotGrid"></div>
+    <!--DynamicPivotGrid-->
+    <!--ToolBar-->
+    <div class="appToolbar" ng-show="isShowContent">
+        <button ng-show="isVisibleInToolbar('editConnectionButton')"
+                type="button" class="btn btn-default appToolbar-button" ng-click="openWindowEditConnection()" title="{{ 'EditConnection' | translate }}">
+            <span class="glyphicon glyphicon-flash"></span>
+            <span>{{ 'EditConnection' | translate }}</span>
+        </button>
+        <button ng-show="isVisibleInToolbar('newReportButton')"
+                type="button" class="btn btn-default appToolbar-imageButton" ng-click="createNewReport()" title="{{ 'NewReport' | translate }}">
+            <div class="appToolbar-button-contentImage imageLibrary_new"></div>
+        </button>
+
+        <button ng-show="isVisibleInToolbar('openReportButton')"
+                type="button" class="btn btn-default appToolbar-imageButton" title="{{ 'MdxDesigner_ImportLayout_ToolTip' | translate }}" ng-click="openReport()">
+            <div class="appToolbar-button-contentImage imageLibrary_fileImport"></div>
+        </button>
+
+        <button type="button"
+                class="btn btn-default appToolbar-imageButton"
+                ng-click="saveReport()"
+                ng-show="currentPage && isVisibleInToolbar('saveReportButton') ? true : false"
+                title="{{ 'MdxDesigner_ExportLayout_ToolTip' | translate }}">
+            <div class="appToolbar-button-contentImage imageLibrary_fileExport"></div>
+        </button>
+
+
+        <button type="button" class="btn btn-default appToolbar-imageButton" title="{{ 'MdxDesigner_ShowFilters_ToolTip' | translate }}"
+                ng-show="currentPage && isVisibleInToolbar('toggleVisibilityActiveFiltersButton')?true: false"
+                ng-class="{'active': isVisibleActiveFilters}"
+                ng-click="toggleVisibilityActiveFilters()">
+            <div class="appToolbar-button-contentImage imageLibrary_activeFilters"></div>
+        </button>
+
+        <button type="button" class="btn btn-default appToolbar-imageButton" title="{{ 'MdxDesigner_CalculatedMemberEditor_ToolTip' | translate }}"
+                ng-show="currentPage&& isVisibleInToolbar('showCustomCalculationsEditorButton')?true: false"
+                ng-click="showCustomCalculationsEditor()">
+            <div class="appToolbar-button-contentImage imageLibrary_customCalculations"></div>
+        </button>
+
+        <button type="button" class="btn btn-default appToolbar-imageButton" title="{{ 'PivotGrid_CellsConditionsDesignerButton_ToolTip' | translate }}"
+                ng-show="currentPage&& isVisibleInToolbar('showCellConditionsDesignerbutton')?true: false"
+                ng-click="showCellConditionsDesigner()">
+            <div class="appToolbar-button-contentImage imageLibrary_cellConditionsDesigner"></div>
+        </button>
+
+        <!--<button type="button" class="btn btn-default appToolbar-imageButton" title="{{ 'MdxDesigner_RunQueryAutomatic_ToolTip' | translate }}"
+                    ng-show="currentPage?true: false"
+                    ng-class="{'active': autoExecuteMdxQuery}"
+                    ng-click="toggleAutoExecute()">
+            <div class="appToolbar-button-contentImage imageLibrary_autoRun"></div>
+        </button>-->
+
+        <button type="button" class="btn btn-default appToolbar-imageButton" title="{{ 'MdxDesigner_ShowMetadata_ToolTip' | translate }} &#13;{{ 'MdxDesigner_ShowQueryDesigner_ToolTip' | translate }}"
+                ng-show="currentPage&& isVisibleInToolbar('toggleVisibilityMetadataAndQueryDesigner')?true: false"
+                ng-class="{'active': showMetadataAndQueryDesigner}"
+                ng-click="toggleShowMetadataAndQueryDesigner()">
+            <div class="appToolbar-button-contentImage imageLibrary_menu"></div>
+        </button>
+
+        <div class="btn-group default-dropdown" ng-show="currentPage&& isVisibleInToolbar('layoutDesignerSelectorDropdown')?true:false">
+            <button type="button" class="btn btn-default dropdown-toggle appToolbar-imageButton"
+                    data-toggle="dropdown"
+                    title="{{ 'LayoutsOfDesignerButton_ToolTip' | translate }}"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                <div class="appToolbar-button-contentImage imageLibrary_designPanel"></div>
+            </button>
+            <ul class="dropdown-menu">
+                <li ng-click="changeLayoutQueryDesigner(0)">
+                    <a>{{ 'ViewLayout_Layout0' | translate }}</a>
+                </li>
+                <li ng-click="changeLayoutQueryDesigner(1)">
+                    <a>{{ 'ViewLayout_Layout1' | translate }}</a>
+                </li>
+                <li ng-click="changeLayoutQueryDesigner(2)">
+                    <a>{{ 'ViewLayout_Layout2' | translate }}</a>
+                </li>
+                <li ng-click="changeLayoutQueryDesigner(3)">
+                    <a>{{ 'ViewLayout_Layout3' | translate }}</a>
+                </li>
+                <li ng-click="changeLayoutQueryDesigner(4)">
+                    <a>{{ 'ViewLayout_Layout4' | translate }}</a>
+                </li>
+            </ul>
+        </div>
+
+        <button type="button" class="btn btn-default appToolbar-imageButton"
+                title="{{ 'ExtensionSettings_ButtonTitle' | translate }}"
+                ng-show="(currentPage&& isVisibleInToolbar('showExtensionSettingButton'))?true:false"
+                ng-click="editExtension()">
+            <div class="appToolbar-button-contentImage imageLibrary_extensions"></div>
+        </button>
+
+        <button type="button" class="btn btn-default appToolbar-imageButton" title="{{ 'PivotGrid_RotateAxesButton_ToolTip' | translate }}"
+                ng-show="currentPage&& isVisibleInToolbar('toggleRotateAxesButton')? true: false"
+                ng-class="{'active': referenceDynamicPivotGrid.descriptionCurrentPage.view.rotateAxes}"
+                ng-click="toggleRotateAxes()">
+            <div class="appToolbar-button-contentImage imageLibrary_rotateAxes"></div>
+        </button>
+
+        <div class="btn-group default-dropdown" ng-show="currentPage&& isVisibleInToolbar('pageSelectorDropdown')? true: false">
+            <button type="button" class="btn btn-default dropdown-toggle appToolbar-button btn-toggle-withcarret" data-toggle="dropdown">{{currentPage.caption}}</button>
+            <button type="button" class="btn btn-default dropdown-toggle appToolbar-button caret-btn" data-toggle="dropdown" aria-expanded="false">
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li ng-repeat="page in reportDescription.content.pages" ng-class="currentPage === page ? 'active':''">
+                    <a class="appToolbar_urlItemDropdown">
+                        <div class="appToolbar_urlItemDropdownContent">
+                            <table class="appToolbar_urlItemDropdownContentTable">
+                                <tbody>
+                                    <tr>
+                                        <td ng-click="setPage(page)"
+                                            title="{{page.caption}}"
+                                            class="appToolbar_urlItemDropdownContentTable_reportCaption">
+                                            {{page.caption}}
+                                        </td>
+                                        <td class="appToolbar_urlItemDropdownContentTable_reportActionButton" ng-click="editPage(page)">
+                                            <span class="glyphicon glyphicon-edit appToolbar_urlItemDropdownContentTable_reportActionButtonImage"
+                                                  title="{{ 'MdxDesigner_ContextMenu_TabItem_Rename' | translate }}"
+                                                  aria-hidden="true"></span>
+                                        </td>
+                                        <td class="appToolbar_urlItemDropdownContentTable_reportActionButton"
+                                            ng-style="{'width':reportDescription.content.pages.length===1?'0px':''}"
+                                            ng-click="deletePage(page)">
+                                            <span class="glyphicon glyphicon-remove appToolbar_urlItemDropdownContentTable_reportActionButtonImage"
+                                                  ng-show="reportDescription.content.pages.length!==1"
+                                                  title="{{ 'MdxDesigner_ContextMenu_TabItem_Delete' | translate }}"
+                                                  aria-hidden="true"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a ng-click="addNewPageInReport()">{{ 'MdxDesigner_ContextMenu_TabItem_Add' | translate }}</a>
+                </li>
+            </ul>
+        </div>
+
+        <button type="button" class="btn btn-default appToolbar-imageButton"
+                title="{{ 'ContextMenu_ShowMDX' | translate }}"
+                ng-show="currentPage && isVisibleInToolbar('showMdxQueryButton')?true: false"
+                ng-click="showMdxQuery()">
+            <div class="appToolbar-button-contentImage  imageLibrary_mdx"></div>
+        </button>
+
+        <!--<button type="button" class="btn btn-default appToolbar-imageButton"
+                    title="{{ 'MdxDesigner_ExecuteQuery_ToolTip' | translate }}"
+                    ng-show="currentPage?true: false"
+                    ng-click="updateData()">
+            <div class="appToolbar-button-contentImage imageLibrary_run"></div>
+        </button>-->
+
+        <button type="button" class="btn btn-default appToolbar-imageButton"
+                title="{{ 'MdxDesigner_ResetAll_ToolTip' | translate }}"
+                ng-show="currentPage&& isVisibleInToolbar('resetLayoutButton')?true: false"
+                ng-click="reset()">
+            <div class="appToolbar-button-contentImage imageLibrary_reset"></div>
+        </button>
+
+        <button type="button" class="btn btn-default appToolbar-imageButton"
+                title="{{ 'PivotGrid_ClearQueryTransform_ToolTip' | translate }}"
+                ng-show="currentPage&& isVisibleInToolbar('resetAllActionsButton')?true: false"
+                ng-click="removeAllActions()">
+            <div class="appToolbar-button-contentImage imageLibrary_clearHistory"></div>
+        </button>
+
+        <div class="btn-group" style="margin-right: 4px;" ng-show="currentPage&& isVisibleInToolbar('historyGroupButtons')?true:false">
+            <button type="button" class="btn btn-default appToolbar-imageButton" aria-label="ToStart"
+                    title="{{ 'PivotGrid_ToBeginButton_ToolTip' | translate }}"
+                    ng-click="historyReportGoTo('start')"
+                    ng-disabled="!isEnabledGoToStart">
+                <div class="appToolbar-button-contentImage imageLibrary_toBegin" aria-hidden="true"></div>
+            </button>
+            <button type="button" class="btn btn-default appToolbar-imageButton" aria-label="ToBack"
+                    title="{{ 'PivotGrid_BackButton_ToolTip' | translate }}"
+                    ng-click="historyReportGoTo('back')"
+                    ng-disabled="!isEnabledGoToBack">
+                <div class="appToolbar-button-contentImage imageLibrary_back" aria-hidden="true"></div>
+            </button>
+            <button type="button" class="btn btn-default appToolbar-imageButton" aria-label="ToNext"
+                    title="{{ 'PivotGrid_ForwardButton_ToolTip' | translate }}"
+                    ng-click="historyReportGoTo('next')"
+                    ng-disabled="!isEnabledGoToNext">
+                <div class="appToolbar-button-contentImage imageLibrary_forward" aria-hidden="false"></div>
+            </button>
+            <button type="button" class="btn btn-default appToolbar-imageButton" aria-label="ToEnd"
+                    title="{{ 'PivotGrid_ToEndButton_ToolTip' | translate }}"
+                    ng-click="historyReportGoTo('end')"
+                    ng-disabled="!isEnabledGoToEnd">
+                <div class="appToolbar-button-contentImage imageLibrary_toEnd" aria-hidden="true"></div>
+            </button>
+        </div>
+
+        <button type="button" class="btn btn-default appToolbar-imageButton"
+                title="{{ 'MdxDesigner_SettingDesigner_ToolTip' | translate }}"
+                ng-show="currentPage&& isVisibleInToolbar('showSettingsButton')?true: false"
+                ng-click="openWindowEditSettings()">
+            <div class="appToolbar-button-contentImage imageLibrary_mdxDesignerSetting"></div>
+        </button>
+
+        <div class="btn-group default-dropdown" ng-show="currentPage&& isVisibleInToolbar('exportDropdown')?true:false">
+            <button type="button" class="btn btn-default dropdown-toggle appToolbar-imageButton"
+                    data-toggle="dropdown"
+                    title="{{ 'Command_Export_Group' | translate }}"
+                    aria aria-haspopup="true"
+                    aria-expanded="false">
+                <div class="appToolbar-button-contentImage imageLibrary_export"></div>
+            </button>
+            <ul class="dropdown-menu">
+                <li ng-click="export(0)">
+                    <a>{{ 'Command_Export_ToExcel' | translate }}</a>
+                </li>
+                <li ng-click="export(1)">
+                    <a>{{ 'Command_Export_ToXML' | translate }}</a>
+                </li>
+                <li ng-click="export(2)">
+                    <a>{{ 'Command_Export_URL' | translate }}</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <button type="button" class="btn btn-default appToolbar-imageButton"
+                ng-show="currentPage&& isVisibleInToolbar('importLayoutButton')"
+                title="{{ 'MdxDesigner_ImportLayout_ToolTip' | translate }}" ng-click="openNewPage()">
+            <div class="appToolbar-button-contentImage imageLibrary_fileImport"></div>
+        </button>
+
+        <button type="button"
+                class="btn btn-default appToolbar-imageButton"
+                ng-show="currentPage&& isVisibleInToolbar('exportLayoutButton')"
+                ng-click="saveCurrentPage()"
+                title="{{ 'MdxDesigner_ExportLayout_ToolTip' | translate }}">
+            <div class="appToolbar-button-contentImage imageLibrary_fileExport"></div>
+        </button>
+
+
+        <button type="button" class="btn btn-default appToolbar-imageButton"
+                ng-show="currentPage&& isVisibleInToolbar('exportToExcelButton')"
+                title="{{ 'Command_Export_ToExcel' | translate }}" ng-click="export(0)">
+            <div class="appToolbar-button-contentImage imageLibrary_export"></div>
+        </button>
+
+        <button type="button" class="btn btn-default appToolbar-imageButton"
+                ng-show="currentPage&& isVisibleInToolbar('exportToXmlButton')"
+                title="{{ 'Command_Export_ToXML' | translate }}" ng-click="export(1)">
+            <div class="appToolbar-button-contentImage imageLibrary_export"></div>
+        </button>
+
+        <div class="btn-group default-dropdown" ng-show="currentPage && isVisibleInToolbar('whatIfAnalysisDropdown')?true:false">
+            <button type="button"
+                    class="btn btn-default dropdown-toggle btn-toggle-withcarret"
+                    data-toggle="dropdown"
+                    title="{{ 'LayoutsOfDesignerButton_ToolTip' | translate }}"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                <div class="appToolbar-button-contentImage imageLibrary_whatIfAnalysis" style="float: left; margin-right: 3px;"></div>
+                <span>{{'Command_Writeback'|translate}}</span>
+            </button>
+            <button type="button" class="btn btn-default dropdown-toggle appToolbar-button caret-btn" data-toggle="dropdown" aria-expanded="false">
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right">
+                <li ng-click="toggleIsEnabledWhatIfAnalysis()" ng-class="referenceDynamicPivotGrid.descriptionCurrentPage.view.isEnabledWhatIfAnalysis===true?'active':''">
+                    <a>
+                        <div class="appToolbar-button-contentImage imageLibrary_editCells" style="float: left; margin-right: 3px;"></div>
+                        {{ 'Command_Writeback_Enable' | translate }}
+                    </a>
+                </li>
+                <li ng-click="toggleUseChangesCache()"
+                    ng-class="{active : referenceDynamicPivotGrid.descriptionCurrentPage.view.useChangesCache===true, disabled : referenceDynamicPivotGrid.descriptionCurrentPage.view.isEnabledWhatIfAnalysis===false}">
+                    <a>
+                        <div class="appToolbar-button-contentImage imageLibrary_useChangesCache" style="float: left; margin-right: 3px;"></div>
+                        {{ 'Command_Writeback_UseChangesCashe' | translate }}
+                    </a>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li ng-click="recalculate()" ng-class="referenceDynamicPivotGrid.descriptionCurrentPage.view.isEnabledWhatIfAnalysis===false||hasLocalChanges===false?'disabled':''">
+                    <a>
+                        <div class="appToolbar-button-contentImage imageLibrary_confirmEdit" style="float: left; margin-right: 3px;"></div>
+                        {{ 'Command_Writeback_ChangesCalculate' | translate }}
+                    </a>
+                </li>
+                <li ng-click="clearLocalChanges()" ng-class="referenceDynamicPivotGrid.descriptionCurrentPage.view.isEnabledWhatIfAnalysis===false||hasLocalChanges===false?'disabled':''">
+                    <a>
+                        <div class="appToolbar-button-contentImage imageLibrary_cancelEdit" style="float: left; margin-right: 3px;"></div>
+                        {{ 'Command_Writeback_ChangesDiscard' | translate }}
+                    </a>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li ng-click="save()" ng-class="referenceDynamicPivotGrid.descriptionCurrentPage.view.isEnabledWhatIfAnalysis===false||(hasServerChanges===false && hasLocalChanges!==true)?'disabled':''">
+                    <a>
+                        <div class="appToolbar-button-contentImage imageLibrary_writebackChangesPublish" style="float: left; margin-right: 3px;"></div>
+                        {{ 'Command_Writeback_ChangesPublish' | translate }}
+                    </a>
+                </li>
+                <li ng-click="rollback()" ng-class="referenceDynamicPivotGrid.descriptionCurrentPage.view.isEnabledWhatIfAnalysis===false||hasServerChanges===false?'disabled':''">
+                    <a>
+                        <div class="appToolbar-button-contentImage imageLibrary_rollbackChanges" style="float: left; margin-right: 3px;"></div>
+                        {{ 'Command_Writeback_ChangesRollback' | translate }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!--<div class="btn-group default-dropdown" ng-show="(currentPage && isVisibleChart && autogenerateSeries)?true:false">
+
+            <button type="button" class="btn btn-default dropdown-toggle appToolbar-button btn-toggle-withcarret" data-toggle="dropdown">{{ chartTypes[chartType] | translate }}</button>
+            <button type="button" class="btn btn-default dropdown-toggle appToolbar-button caret-btn" data-toggle="dropdown" aria-expanded="false">
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li ng-repeat="type in chartTypes" ng-click="changeChartType($index)">
+                    <a>{{ type | translate }}</a>
+                </li>
+            </ul>
+        </div>-->
+
+    </div>
+    <!--ToolBar-->
+    <!--LoadPanel-->
+    <div data-load-panel data-message="{{message}}" data-visible="{{visible}}" ng-controller="busyIndicatorController"></div>
+    <!--LoadPanel-->
+</div>

@@ -1,0 +1,23 @@
+﻿@using Ranet.Analytics.PivotGrid.Server.Mvc
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Ranet Analytics</title>
+
+    <script>
+        window.applicationUrlSpa = "/";
+        window.resoursePathSpa = "/Assets/";
+        window.preferLanguage = "en";
+    </script>
+
+    <!--Ranet-->
+    @Html.RanetAnalytics().GetAllResources()
+    <!--Ranet-->
+
+</head>
+<body>
+    @RenderBody()
+</body>
+</html>
