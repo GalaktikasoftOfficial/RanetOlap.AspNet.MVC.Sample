@@ -6,4 +6,7 @@
 /.vs
 /Ranet.PivotTable.MVC/bin
 /Ranet.PivotTable.MVC/obj/Debug
+/Ranet.PivotTable.MVC/obj/Release
 /Ranet.PivotTable/Assets/Vendors
+/Ranet.PivotTable/Assets/Templates
+/Ranet.PivotTable/Assets/Analytics
