@@ -8,5 +8,4 @@
 /Ranet.PivotTable.MVC/obj/Debug
 /Ranet.PivotTable.MVC/obj/Release
 /Ranet.PivotTable.MVC/Assets
-
-
+/Ranet.PivotTable.MVC/logRanetOlap.xml

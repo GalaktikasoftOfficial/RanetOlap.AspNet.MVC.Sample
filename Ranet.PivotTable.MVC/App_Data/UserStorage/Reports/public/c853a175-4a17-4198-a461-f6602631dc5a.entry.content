@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pages>
+    <Page>
+      <Id>622fb68f-c0b9-42f1-ba24-00f291635627</Id>
+      <CubeName>[Adventure Works]</CubeName>
+      <Caption>Page 1</Caption>
+      <AutoExecuteQuery>true</AutoExecuteQuery>
+      <Layout>
+        <Filters />
+        <Rows>
+          <BaseItemMetadata xsi:type="Hierarchy">
+            <Caption>Product Categories</Caption>
+            <UniqueName>[Product].[Product Categories]</UniqueName>
+            <DefaultMember>[Product].[Product Categories].[All Products]</DefaultMember>
+            <HierarchyType>User</HierarchyType>
+            <DimensionType>Products</DimensionType>
+          </BaseItemMetadata>
+        </Rows>
+        <Columns>
+          <BaseItemMetadata xsi:type="Hierarchy">
+            <Caption>Date.Calendar</Caption>
+            <UniqueName>[Date].[Calendar]</UniqueName>
+            <DefaultMember>[Date].[Calendar].[All Periods]</DefaultMember>
+            <HierarchyType>User</HierarchyType>
+            <DimensionType>Time</DimensionType>
+          </BaseItemMetadata>
+        </Columns>
+        <Data>
+          <BaseItemMetadata xsi:type="Measure">
+            <Caption>Reseller Sales Amount</Caption>
+            <UniqueName>[Measures].[Reseller Sales Amount]</UniqueName>
+            <Expression />
+          </BaseItemMetadata>
+        </Data>
+      </Layout>
+      <CalculatedMembers />
+      <CalculatedNamedSets />
+      <QueryDesignerSetting>
+        <HideEmptyColumns>true</HideEmptyColumns>
+        <HideEmptyRows>true</HideEmptyRows>
+        <SubsetCount>0</SubsetCount>
+        <UseVisualTotals>true</UseVisualTotals>
+        <GenerateCustomCalculated>false</GenerateCustomCalculated>
+        <IncludeAllMembers>false</IncludeAllMembers>
+        <IncludeCustomCalculationsInDrillDown>false</IncludeCustomCalculationsInDrillDown>
+        <UseHierarchize>false</UseHierarchize>
+      </QueryDesignerSetting>
+      <LoadStateFromHistory>false</LoadStateFromHistory>
+      <ExtensionSettings>
+        <ChartSettings>
+          <Autogenerate>true</Autogenerate>
+          <DefaultDiagramType>Bar</DefaultDiagramType>
+          <Legend>
+            <Visible>true</Visible>
+            <Position>Top</Position>
+          </Legend>
+          <SeriesOptions />
+          <ShowArgumentLabels>true</ShowArgumentLabels>
+          <Tooltip>
+            <Enabled>true</Enabled>
+          </Tooltip>
+          <Pie>
+            <Header>
+              <Title>
+                <Text />
+                <FontSize>24</FontSize>
+                <Font>open sans</Font>
+              </Title>
+            </Header>
+            <Size>
+              <CanvasHeight>400</CanvasHeight>
+              <CanvasWidth>400</CanvasWidth>
+              <PieInnerRadius>0%</PieInnerRadius>
+              <PieOuterRadius>70%</PieOuterRadius>
+            </Size>
+            <Tooltips>
+              <Enabled>true</Enabled>
+            </Tooltips>
+            <Effects>
+              <Load>
+                <EffectName>none</EffectName>
+                <Speed>0</Speed>
+                <Size>0</Size>
+              </Load>
+              <PullOutSegmentOnClick>
+                <EffectName>linear</EffectName>
+                <Speed>400</Speed>
+                <Size>8</Size>
+              </PullOutSegmentOnClick>
+            </Effects>
+            <MinHeight>200</MinHeight>
+            <Labels>
+              <Outer>
+                <Format>value-percentage1</Format>
+                <PieDistance>15</PieDistance>
+              </Outer>
+              <Inner>
+                <Format>none</Format>
+                <HideWhenLessThanPercentage>3</HideWhenLessThanPercentage>
+              </Inner>
+              <MainLabel>
+                <FontSize>11</FontSize>
+              </MainLabel>
+              <Percentage>
+                <Color>#fff</Color>
+                <FontSize>9</FontSize>
+                <DecimalPlaces>0</DecimalPlaces>
+              </Percentage>
+              <Value>
+                <Color>#fff</Color>
+                <FontSize>11</FontSize>
+              </Value>
+              <Lines>
+                <Enabled>true</Enabled>
+              </Lines>
+              <Truncation>
+                <Enabled>true</Enabled>
+                <TruncateLength>27</TruncateLength>
+              </Truncation>
+            </Labels>
+            <PieSeries />
+            <Legend>
+              <Visible>true</Visible>
+              <Position>Top</Position>
+            </Legend>
+          </Pie>
+          <Palette>category20</Palette>
+          <UseMultipleCharts>false</UseMultipleCharts>
+          <MultipleColumns>1</MultipleColumns>
+          <MultipleRows>1</MultipleRows>
+          <CellNumber>10000</CellNumber>
+          <SwapAxes>false</SwapAxes>
+          <HierarchicalView>false</HierarchicalView>
+        </ChartSettings>
+        <ExtensionType>Chart</ExtensionType>
+        <VectorMapSettings>
+          <DataSettings>
+            <Col>0</Col>
+            <Row />
+          </DataSettings>
+        </VectorMapSettings>
+      </ExtensionSettings>
+      <PlacementLayoutModeDataViewer>ExtensionBelow</PlacementLayoutModeDataViewer>
+      <PlacementLayoutModeQueryDesigner>MetadataAndQueryDesignerSideBySide</PlacementLayoutModeQueryDesigner>
+      <IsVisibleActiveFilters>false</IsVisibleActiveFilters>
+      <CustomCellsConditions />
+      <InitialSourceType>State</InitialSourceType>
+      <IsEnabledWhatIfAnalysis>false</IsEnabledWhatIfAnalysis>
+      <UseCustomUpdateScriptTemplate>false</UseCustomUpdateScriptTemplate>
+      <UseChangesCache>false</UseChangesCache>
+      <CurrentUpdateScriptTemplate>(
+&lt;%[Product].[Product Categories]%&gt;,
+&lt;%[Date].[Calendar]%&gt;
+)=&lt;%newValue%&gt;</CurrentUpdateScriptTemplate>
+      <ShowMetadataAndQueryDesigner>true</ShowMetadataAndQueryDesigner>
+      <IsVisibleExtensionPanel>false</IsVisibleExtensionPanel>
+      <HeaderText />
+      <FooterText />
+      <AvailableSlicers />
+    </Page>
+  </Pages>
+</Report>
