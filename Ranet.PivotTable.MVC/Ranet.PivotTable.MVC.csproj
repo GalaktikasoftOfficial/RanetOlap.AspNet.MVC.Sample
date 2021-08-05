@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Ranet.PivotTable.MVC</RootNamespace>
     <AssemblyName>Ranet.PivotTable.MVC</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -46,8 +46,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ClosedXML, Version=0.94.2.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
-      <HintPath>..\packages\ClosedXML.Signed.0.94.2\lib\net46\ClosedXML.dll</HintPath>
+    <Reference Include="ClosedXML, Version=0.94.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.94.2\lib\net46\ClosedXML.dll</HintPath>
     </Reference>
     <Reference Include="ColorCode, Version=1.0.1.62759, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ColorCode.1.0.1\lib\ColorCode.dll</HintPath>
@@ -58,6 +58,9 @@
     <Reference Include="ExcelNumberFormat, Version=1.0.7.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
       <HintPath>..\packages\ExcelNumberFormat.1.0.7\lib\net20\ExcelNumberFormat.dll</HintPath>
     </Reference>
+    <Reference Include="FastMember, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.1.5.0\lib\net461\FastMember.dll</HintPath>
+    </Reference>
     <Reference Include="FastMember.Signed, Version=1.5.0.0, Culture=neutral, PublicKeyToken=9e8f22703bef9a29, processorArchitecture=MSIL">
       <HintPath>..\packages\FastMember.Signed.1.5.0\lib\net461\FastMember.Signed.dll</HintPath>
     </Reference>
@@ -67,23 +70,23 @@
     <Reference Include="MarkupConverter, Version=0.0.0.0, Culture=neutral, PublicKeyToken=275ae570975796c6, processorArchitecture=MSIL">
       <HintPath>..\packages\MarkupConverter.1.0.6\lib\net45\MarkupConverter.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AnalysisServices, Version=18.0.5.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AnalysisServices.retail.amd64.18.0.5\lib\net45\Microsoft.AnalysisServices.dll</HintPath>
+    <Reference Include="Microsoft.AnalysisServices, Version=18.2.3.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AnalysisServices.retail.amd64.18.2.3\lib\net45\Microsoft.AnalysisServices.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AnalysisServices.AdomdClient, Version=18.0.5.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AnalysisServices.AdomdClient.retail.amd64.18.0.5\lib\net45\Microsoft.AnalysisServices.AdomdClient.dll</HintPath>
+    <Reference Include="Microsoft.AnalysisServices.AdomdClient, Version=18.2.3.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AnalysisServices.AdomdClient.retail.amd64.18.2.3\lib\net45\Microsoft.AnalysisServices.AdomdClient.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AnalysisServices.Core, Version=18.0.5.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AnalysisServices.retail.amd64.18.0.5\lib\net45\Microsoft.AnalysisServices.Core.dll</HintPath>
+    <Reference Include="Microsoft.AnalysisServices.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AnalysisServices.retail.amd64.18.2.3\lib\net45\Microsoft.AnalysisServices.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AnalysisServices.SPClient.Interfaces, Version=18.0.5.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AnalysisServices.retail.amd64.18.0.5\lib\net45\Microsoft.AnalysisServices.SPClient.Interfaces.dll</HintPath>
+    <Reference Include="Microsoft.AnalysisServices.SPClient.Interfaces, Version=18.2.3.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AnalysisServices.retail.amd64.18.2.3\lib\net45\Microsoft.AnalysisServices.SPClient.Interfaces.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AnalysisServices.Tabular, Version=18.0.5.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AnalysisServices.retail.amd64.18.0.5\lib\net45\Microsoft.AnalysisServices.Tabular.dll</HintPath>
+    <Reference Include="Microsoft.AnalysisServices.Tabular, Version=18.2.3.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AnalysisServices.retail.amd64.18.2.3\lib\net45\Microsoft.AnalysisServices.Tabular.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AnalysisServices.Tabular.Json, Version=18.0.5.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AnalysisServices.retail.amd64.18.0.5\lib\net45\Microsoft.AnalysisServices.Tabular.Json.dll</HintPath>
+    <Reference Include="Microsoft.AnalysisServices.Tabular.Json, Version=18.2.3.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AnalysisServices.retail.amd64.18.2.3\lib\net45\Microsoft.AnalysisServices.Tabular.Json.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -91,13 +94,43 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.4.4.0-beta11\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Web">
+      <HintPath>..\packages\NLog.Web.4.2.1\lib\net35\NLog.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.Charting.dll</HintPath>
     </Reference>
     <Reference Include="Ranet.Analytics.PivotGrid, Version=5.9.0.0, Culture=neutral, PublicKeyToken=6411e51d1da2afdf, processorArchitecture=MSIL">
       <HintPath>..\packages\Ranet.Analytics.PivotGrid.5.9.735\lib\net40\Ranet.Analytics.PivotGrid.dll</HintPath>
     </Reference>
     <Reference Include="Ranet.Analytics.WebViewer.Olap, Version=5.9.0.0, Culture=neutral, PublicKeyToken=6411e51d1da2afdf, processorArchitecture=MSIL">
       <HintPath>..\packages\Ranet.Analytics.PivotGrid.5.9.735\lib\net40\Ranet.Analytics.WebViewer.Olap.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranet.Olap, Version=3.9.101.0, Culture=neutral, PublicKeyToken=6411e51d1da2afdf, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ranet.UILibrary.Olap.3.9.101\lib\net\Ranet.Olap.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranet.Olap.Core, Version=3.9.101.0, Culture=neutral, PublicKeyToken=6411e51d1da2afdf, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ranet.UILibrary.Olap.3.9.101\lib\net\Ranet.Olap.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranet.Olap.Mdx, Version=3.9.101.0, Culture=neutral, PublicKeyToken=6411e51d1da2afdf, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ranet.UILibrary.Olap.3.9.101\lib\net\Ranet.Olap.Mdx.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranet.Olap.Themes, Version=3.9.101.0, Culture=neutral, PublicKeyToken=6411e51d1da2afdf, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ranet.UILibrary.Olap.3.9.101\lib\net\Ranet.Olap.Themes.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranet.ZipLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6411e51d1da2afdf, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ranet.ZipLib.1.0.1\lib\net35\Ranet.ZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Svg, Version=2.2.1.39233, Culture=neutral, PublicKeyToken=12a0bac221edeae2, processorArchitecture=MSIL">
+      <HintPath>..\packages\Svg.2.3.0\lib\net35\Svg.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -107,8 +140,8 @@
     <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
     </Reference>
-    <Reference Include="System.IO.Packaging, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.IO.Packaging.4.5.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    <Reference Include="System.IO.Packaging, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.7.0\lib\net46\System.IO.Packaging.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
@@ -175,6 +208,21 @@
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
+    <Reference Include="Zaaml.Core, Version=0.1.396.0, Culture=neutral, PublicKeyToken=742455a08fdd1384, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zaaml.Core.0.1.396\lib\net45\Zaaml.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Zaaml.Platform, Version=0.1.396.0, Culture=neutral, PublicKeyToken=742455a08fdd1384, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zaaml.Platform.0.1.396\lib\net45\Zaaml.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Zaaml.PresentationCore, Version=0.1.396.0, Culture=neutral, PublicKeyToken=742455a08fdd1384, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zaaml.PresentationCore.0.1.396\lib\net45\Zaaml.PresentationCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Zaaml.Themes, Version=0.1.396.0, Culture=neutral, PublicKeyToken=742455a08fdd1384, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zaaml.Themes.0.1.396\lib\net45\Zaaml.Themes.dll</HintPath>
+    </Reference>
+    <Reference Include="Zaaml.UI, Version=0.1.396.0, Culture=neutral, PublicKeyToken=742455a08fdd1384, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zaaml.UI.0.1.396\lib\net45\Zaaml.UI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -195,6 +243,8 @@
     <Compile Include="Settings.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\analytics\google.js" />
+    <Content Include="Assets\analytics\mixpanel.js" />
     <Content Include="Assets\css\app.min.css" />
     <Content Include="Assets\css\appScoped.cnp.min.css" />
     <Content Include="Assets\css\appScoped.min.css" />
@@ -458,78 +508,82 @@
     <Content Include="Assets\Maps\ZAF.txt" />
     <Content Include="Assets\Maps\ZMB.txt" />
     <Content Include="Assets\Maps\ZWE.txt" />
-    <Content Include="Assets\Templates\addSeria.html" />
-    <Content Include="Assets\Templates\appDynamicPivotGrid1.html" />
-    <Content Include="Assets\Templates\appDynamicPivotGrid2.html" />
-    <Content Include="Assets\Templates\cellConditionsDesigner.html" />
-    <Content Include="Assets\Templates\cnpDynamicPivotGrid.html" />
-    <Content Include="Assets\Templates\custom-filter-template.html" />
-    <Content Include="Assets\Templates\customCalculationsEditor.html" />
-    <Content Include="Assets\Templates\customFilter-view.html" />
-    <Content Include="Assets\Templates\drillthrough-view.html" />
-    <Content Include="Assets\Templates\editCurrentConnection.html" />
-    <Content Include="Assets\Templates\editExtension.html" />
-    <Content Include="Assets\Templates\editFolder.html" />
-    <Content Include="Assets\Templates\editPage.html" />
-    <Content Include="Assets\Templates\editPieSeria.html" />
-    <Content Include="Assets\Templates\editQueryDesignerSettings.html" />
-    <Content Include="Assets\Templates\editSeria.html" />
-    <Content Include="Assets\Templates\editSeriaSettings.html" />
-    <Content Include="Assets\Templates\filter-window.html" />
-    <Content Include="Assets\Templates\floatingWindow.html" />
-    <Content Include="Assets\Templates\group-filter-row-template.html" />
-    <Content Include="Assets\Templates\label-filter-row-template.html" />
-    <Content Include="Assets\Templates\level-selector-row-template.html" />
-    <Content Include="Assets\Templates\loadReportFromPC.html" />
-    <Content Include="Assets\Templates\measureChoiceSelector-button.html" />
-    <Content Include="Assets\Templates\measureChoiceSelector-control.html" />
-    <Content Include="Assets\Templates\measureChoiceSelector-window.html" />
-    <Content Include="Assets\Templates\memberChoice-view.html" />
-    <Content Include="Assets\Templates\message.html" />
-    <Content Include="Assets\Templates\newReport.html" />
-    <Content Include="Assets\Templates\openReport.html" />
-    <Content Include="Assets\Templates\queryViewer.html" />
-    <Content Include="Assets\Templates\saveReport.html" />
-    <Content Include="Assets\Templates\searchPanel-memberChoice-view.html" />
-    <Content Include="Assets\Templates\showException.html" />
-    <Content Include="Assets\Templates\sort-hierarchy-template.html" />
-    <Content Include="Assets\Templates\sort-options-editor.html" />
-    <Content Include="Assets\Templates\top-filter-row-template.html" />
-    <Content Include="Assets\Templates\urlViewer.html" />
-    <Content Include="Assets\Templates\value-filter-row-template.html" />
-    <Content Include="Assets\Vendors\angularUI\ui-bootstrap-tpls.min.js" />
-    <Content Include="Assets\Vendors\Angular\angular-sanitize.min.js" />
-    <Content Include="Assets\Vendors\Angular\angular-translate-loader-static-files.min.js" />
-    <Content Include="Assets\Vendors\Angular\angular-translate.min.js" />
-    <Content Include="Assets\Vendors\Angular\angular.min.js" />
-    <Content Include="Assets\Vendors\bootstrap-colorpicker\bootstrap-colorpicker.min.css" />
-    <Content Include="Assets\Vendors\bootstrap-colorpicker\bootstrap-colorpicker.min.js" />
-    <Content Include="Assets\Vendors\bootstrap\bootstrap-metropolisTheme.min.css" />
-    <Content Include="Assets\Vendors\bootstrap\bootstrap-metropolisThemeScoped.min.css" />
-    <Content Include="Assets\Vendors\bootstrap\bootstrap-office2010blueTheme.min.css" />
-    <Content Include="Assets\Vendors\bootstrap\bootstrap-office2010blueThemeScoped.min.css" />
-    <Content Include="Assets\Vendors\bootstrap\bootstrap-owcdesignTheme.min.css" />
-    <Content Include="Assets\Vendors\bootstrap\bootstrap.min.js" />
-    <Content Include="Assets\Vendors\cldr\cldr.js" />
-    <Content Include="Assets\Vendors\cldr\event.js" />
-    <Content Include="Assets\Vendors\cldr\supplemental.js" />
-    <Content Include="Assets\Vendors\d3pie\d3pie.js" />
-    <Content Include="Assets\Vendors\d3\d3.min.js" />
-    <Content Include="Assets\Vendors\FileSaver\FileSaver.min.js" />
-    <Content Include="Assets\Vendors\fontAwesome\font-awesome.min.css" />
-    <Content Include="Assets\Vendors\fonts\fontawesome-webfont.svg" />
-    <Content Include="Assets\Vendors\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Assets\Vendors\globalize\globalize.js" />
-    <Content Include="Assets\Vendors\globalize\message.js" />
-    <Content Include="Assets\Vendors\globalize\number.js" />
-    <Content Include="Assets\Vendors\handsontable\handsontable.full.min.css" />
-    <Content Include="Assets\Vendors\handsontable\handsontable.full.min.js" />
-    <Content Include="Assets\Vendors\iso-3166-2\iso3166.min.js" />
-    <Content Include="Assets\Vendors\jqueryUITouch\jQueryUITouch.js" />
-    <Content Include="Assets\Vendors\jqueryUI\jquery-ui.js" />
-    <Content Include="Assets\Vendors\jqueryUI\jquery-ui.min.css" />
-    <Content Include="Assets\Vendors\jquery\jquery.min.js" />
-    <Content Include="Assets\Vendors\topojson\topojson-client.min.js" />
+    <Content Include="Assets\templates\addSeria.html" />
+    <Content Include="Assets\templates\appDynamicPivotGrid.html" />
+    <Content Include="Assets\templates\appDynamicPivotGrid1.html" />
+    <Content Include="Assets\templates\appDynamicPivotGrid2.html" />
+    <Content Include="Assets\templates\cellConditionsDesigner.html" />
+    <Content Include="Assets\templates\cnpDynamicPivotGrid.html" />
+    <Content Include="Assets\templates\custom-filter-template.html" />
+    <Content Include="Assets\templates\customCalculationsEditor.html" />
+    <Content Include="Assets\templates\customFilter-view.html" />
+    <Content Include="Assets\templates\drillthrough-view.html" />
+    <Content Include="Assets\templates\editCurrentConnection.html" />
+    <Content Include="Assets\templates\editExtension.html" />
+    <Content Include="Assets\templates\editFolder.html" />
+    <Content Include="Assets\templates\editPage.html" />
+    <Content Include="Assets\templates\editPieSeria.html" />
+    <Content Include="Assets\templates\editQueryDesignerSettings.html" />
+    <Content Include="Assets\templates\editSeria.html" />
+    <Content Include="Assets\templates\editSeriaSettings.html" />
+    <Content Include="Assets\templates\filter-window.html" />
+    <Content Include="Assets\templates\floatingWindow.html" />
+    <Content Include="Assets\templates\group-filter-row-template.html" />
+    <Content Include="Assets\templates\label-filter-row-template.html" />
+    <Content Include="Assets\templates\level-selector-row-template.html" />
+    <Content Include="Assets\templates\loadReportFromPC.html" />
+    <Content Include="Assets\templates\measureChoiceSelector-button.html" />
+    <Content Include="Assets\templates\measureChoiceSelector-control.html" />
+    <Content Include="Assets\templates\measureChoiceSelector-window.html" />
+    <Content Include="Assets\templates\memberChoice-view.html" />
+    <Content Include="Assets\templates\message.html" />
+    <Content Include="Assets\templates\newReport.html" />
+    <Content Include="Assets\templates\openReport.html" />
+    <Content Include="Assets\templates\queryViewer.html" />
+    <Content Include="Assets\templates\saveReport.html" />
+    <Content Include="Assets\templates\searchPanel-memberChoice-view.html" />
+    <Content Include="Assets\templates\showException.html" />
+    <Content Include="Assets\templates\showMdxQuery.html" />
+    <Content Include="Assets\templates\sort-hierarchy-template.html" />
+    <Content Include="Assets\templates\sort-options-editor.html" />
+    <Content Include="Assets\templates\top-filter-row-template.html" />
+    <Content Include="Assets\templates\urlViewer.html" />
+    <Content Include="Assets\templates\value-filter-row-template.html" />
+    <Content Include="Assets\vendors\angularUI\ui-bootstrap-tpls.min.js" />
+    <Content Include="Assets\vendors\angular\angular-sanitize.min.js" />
+    <Content Include="Assets\vendors\angular\angular-translate-loader-static-files.min.js" />
+    <Content Include="Assets\vendors\angular\angular-translate.min.js" />
+    <Content Include="Assets\vendors\angular\angular.min.js" />
+    <Content Include="Assets\vendors\bootstrap-colorpicker\bootstrap-colorpicker.min.css" />
+    <Content Include="Assets\vendors\bootstrap-colorpicker\bootstrap-colorpicker.min.js" />
+    <Content Include="Assets\vendors\bootstrap\bootstrap-metropolisTheme.min.css" />
+    <Content Include="Assets\vendors\bootstrap\bootstrap-metropolisThemeScoped.min.css" />
+    <Content Include="Assets\vendors\bootstrap\bootstrap-office2010blueTheme.min.css" />
+    <Content Include="Assets\vendors\bootstrap\bootstrap-office2010blueThemeScoped.min.css" />
+    <Content Include="Assets\vendors\bootstrap\bootstrap-owcdesignTheme.min.css" />
+    <Content Include="Assets\vendors\bootstrap\bootstrap-zogotechTheme.min.css" />
+    <Content Include="Assets\vendors\bootstrap\bootstrap.min.js" />
+    <Content Include="Assets\vendors\cldr\cldr.js" />
+    <Content Include="Assets\vendors\cldr\event.js" />
+    <Content Include="Assets\vendors\cldr\supplemental.js" />
+    <Content Include="Assets\vendors\d3pie\d3pie.js" />
+    <Content Include="Assets\vendors\d3\d3.min.js" />
+    <Content Include="Assets\vendors\FileSaver\FileSaver.min.js" />
+    <Content Include="Assets\vendors\fontAwesome\font-awesome.min.css" />
+    <Content Include="Assets\vendors\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\vendors\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\vendors\globalize\globalize.js" />
+    <Content Include="Assets\vendors\globalize\message.js" />
+    <Content Include="Assets\vendors\globalize\number.js" />
+    <Content Include="Assets\vendors\handsontable\handsontable.full.min.css" />
+    <Content Include="Assets\vendors\handsontable\handsontable.full.min.js" />
+    <Content Include="Assets\vendors\iso-3166-2\iso3166.min.js" />
+    <Content Include="Assets\vendors\jqueryUITouch\jQueryUITouch.js" />
+    <Content Include="Assets\vendors\jqueryUI\images\ui-icons_222222_256x240.png" />
+    <Content Include="Assets\vendors\jqueryUI\jquery-ui.js" />
+    <Content Include="Assets\vendors\jqueryUI\jquery-ui.min.css" />
+    <Content Include="Assets\vendors\jquery\jquery.min.js" />
+    <Content Include="Assets\vendors\topojson\topojson-client.min.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -538,434 +592,445 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Assets\Vendors\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Assets\Vendors\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Assets\Vendors\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Assets\Vendors\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Assets\Vendors\fonts\FontAwesome.otf" />
-    <Content Include="Assets\Vendors\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Assets\Vendors\fonts\fontawesome-webfont.woff" />
-    <Content Include="Assets\Vendors\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Assets\Vendors\fonts\fontawesome-webfont.eot" />
-    <Content Include="Assets\Vendors\cldrData\supplemental\likelySubtags.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\variants.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\units.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\timeZoneNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\territories.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\scripts.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\posix.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\numbers.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\measurementSystemNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\localeDisplayNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\listPatterns.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\layout.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\languages.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\delimiters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\dateFields.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\currencies.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\characters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\ca-roc.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\ca-persian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\ca-japanese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\ca-islamic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\ca-islamic-umalqura.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\ca-islamic-tbla.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\ca-islamic-rgsa.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\ca-islamic-civil.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\ca-indian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\ca-hebrew.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\ca-gregorian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\ca-generic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\ca-ethiopic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\ca-ethiopic-amete-alem.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\ca-dangi.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\ca-coptic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\ca-chinese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\zh\ca-buddhist.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\variants.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\units.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\timeZoneNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\territories.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\scripts.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\posix.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\numbers.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\measurementSystemNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\localeDisplayNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\listPatterns.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\layout.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\languages.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\delimiters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\dateFields.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\currencies.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\contextTransforms.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\characters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\ca-roc.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\ca-persian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\ca-japanese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\ca-islamic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\ca-islamic-umalqura.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\ca-islamic-tbla.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\ca-islamic-rgsa.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\ca-islamic-civil.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\ca-indian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\ca-hebrew.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\ca-gregorian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\ca-generic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\ca-ethiopic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\ca-ethiopic-amete-alem.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\ca-dangi.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\ca-coptic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\ca-chinese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\uk\ca-buddhist.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\variants.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\units.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\timeZoneNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\territories.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\scripts.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\posix.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\numbers.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\measurementSystemNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\localeDisplayNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\listPatterns.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\layout.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\languages.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\delimiters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\dateFields.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\currencies.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\contextTransforms.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\characters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\ca-roc.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\ca-persian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\ca-japanese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\ca-islamic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\ca-islamic-umalqura.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\ca-islamic-tbla.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\ca-islamic-rgsa.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\ca-islamic-civil.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\ca-indian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\ca-hebrew.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\ca-gregorian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\ca-generic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\ca-ethiopic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\ca-ethiopic-amete-alem.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\ca-dangi.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\ca-coptic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\ca-chinese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\ru\ca-buddhist.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\variants.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\units.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\timeZoneNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\territories.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\scripts.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\posix.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\numbers.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\measurementSystemNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\localeDisplayNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\listPatterns.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\layout.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\languages.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\delimiters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\dateFields.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\currencies.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\contextTransforms.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\characters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\ca-roc.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\ca-persian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\ca-japanese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\ca-islamic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\ca-islamic-umalqura.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\ca-islamic-tbla.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\ca-islamic-rgsa.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\ca-islamic-civil.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\ca-indian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\ca-hebrew.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\ca-gregorian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\ca-generic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\ca-ethiopic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\ca-ethiopic-amete-alem.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\ca-dangi.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\ca-coptic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\ca-chinese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pt\ca-buddhist.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\variants.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\units.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\timeZoneNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\territories.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\scripts.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\posix.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\numbers.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\measurementSystemNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\localeDisplayNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\listPatterns.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\layout.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\languages.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\delimiters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\dateFields.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\currencies.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\contextTransforms.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\characters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\ca-roc.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\ca-persian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\ca-japanese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\ca-islamic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\ca-islamic-umalqura.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\ca-islamic-tbla.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\ca-islamic-rgsa.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\ca-islamic-civil.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\ca-indian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\ca-hebrew.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\ca-gregorian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\ca-generic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\ca-ethiopic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\ca-ethiopic-amete-alem.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\ca-dangi.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\ca-coptic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\ca-chinese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\pl\ca-buddhist.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\variants.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\units.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\timeZoneNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\territories.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\scripts.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\posix.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\numbers.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\measurementSystemNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\localeDisplayNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\listPatterns.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\layout.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\languages.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\delimiters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\dateFields.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\currencies.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\contextTransforms.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\characters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\ca-roc.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\ca-persian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\ca-japanese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\ca-islamic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\ca-islamic-umalqura.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\ca-islamic-tbla.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\ca-islamic-rgsa.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\ca-islamic-civil.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\ca-indian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\ca-hebrew.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\ca-gregorian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\ca-generic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\ca-ethiopic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\ca-ethiopic-amete-alem.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\ca-dangi.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\ca-coptic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\ca-chinese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\it\ca-buddhist.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\variants.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\units.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\timeZoneNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\territories.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\scripts.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\posix.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\numbers.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\measurementSystemNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\localeDisplayNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\listPatterns.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\layout.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\languages.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\delimiters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\dateFields.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\currencies.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\contextTransforms.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\characters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\ca-roc.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\ca-persian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\ca-japanese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\ca-islamic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\ca-islamic-umalqura.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\ca-islamic-tbla.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\ca-islamic-rgsa.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\ca-islamic-civil.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\ca-indian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\ca-hebrew.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\ca-gregorian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\ca-generic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\ca-ethiopic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\ca-ethiopic-amete-alem.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\ca-dangi.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\ca-coptic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\ca-chinese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\fr\ca-buddhist.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\variants.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\units.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\timeZoneNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\territories.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\scripts.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\posix.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\numbers.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\measurementSystemNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\localeDisplayNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\listPatterns.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\layout.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\languages.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\delimiters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\dateFields.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\currencies.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\contextTransforms.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\characters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\ca-roc.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\ca-persian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\ca-japanese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\ca-islamic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\ca-islamic-umalqura.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\ca-islamic-tbla.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\ca-islamic-rgsa.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\ca-islamic-civil.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\ca-indian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\ca-hebrew.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\ca-gregorian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\ca-generic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\ca-ethiopic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\ca-ethiopic-amete-alem.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\ca-dangi.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\ca-coptic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\ca-chinese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\es\ca-buddhist.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\variants.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\units.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\timeZoneNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\territories.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\scripts.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\posix.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\numbers.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\measurementSystemNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\localeDisplayNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\listPatterns.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\layout.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\languages.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\delimiters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\dateFields.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\currencies.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\contextTransforms.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\characters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\ca-roc.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\ca-persian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\ca-japanese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\ca-islamic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\ca-islamic-umalqura.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\ca-islamic-tbla.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\ca-islamic-rgsa.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\ca-islamic-civil.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\ca-indian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\ca-hebrew.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\ca-gregorian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\ca-generic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\ca-ethiopic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\ca-ethiopic-amete-alem.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\ca-dangi.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\ca-coptic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\ca-chinese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\en\ca-buddhist.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\variants.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\units.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\timeZoneNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\territories.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\scripts.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\posix.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\numbers.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\measurementSystemNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\localeDisplayNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\listPatterns.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\layout.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\languages.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\delimiters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\dateFields.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\currencies.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\contextTransforms.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\characters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\ca-roc.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\ca-persian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\ca-japanese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\ca-islamic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\ca-islamic-umalqura.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\ca-islamic-tbla.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\ca-islamic-rgsa.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\ca-islamic-civil.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\ca-indian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\ca-hebrew.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\ca-gregorian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\ca-generic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\ca-ethiopic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\ca-ethiopic-amete-alem.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\ca-dangi.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\ca-coptic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\ca-chinese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\de\ca-buddhist.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\variants.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\units.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\timeZoneNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\territories.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\scripts.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\posix.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\numbers.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\measurementSystemNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\localeDisplayNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\listPatterns.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\layout.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\languages.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\delimiters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\dateFields.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\currencies.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\contextTransforms.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\characters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\ca-roc.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\ca-persian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\ca-japanese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\ca-islamic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\ca-islamic-umalqura.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\ca-islamic-tbla.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\ca-islamic-rgsa.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\ca-islamic-civil.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\ca-indian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\ca-hebrew.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\ca-gregorian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\ca-generic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\ca-ethiopic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\ca-ethiopic-amete-alem.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\ca-dangi.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\ca-coptic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\ca-chinese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\cs\ca-buddhist.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\variants.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\units.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\timeZoneNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\territories.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\scripts.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\posix.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\numbers.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\measurementSystemNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\localeDisplayNames.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\listPatterns.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\layout.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\languages.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\delimiters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\dateFields.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\currencies.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\characters.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\ca-roc.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\ca-persian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\ca-japanese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\ca-islamic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\ca-islamic-umalqura.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\ca-islamic-tbla.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\ca-islamic-rgsa.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\ca-islamic-civil.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\ca-indian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\ca-hebrew.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\ca-gregorian.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\ca-generic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\ca-ethiopic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\ca-ethiopic-amete-alem.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\ca-dangi.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\ca-coptic.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\ca-chinese.json" />
-    <Content Include="Assets\Vendors\cldrData\main\be\ca-buddhist.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\ca-buddhist.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\ca-chinese.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\ca-coptic.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\ca-dangi.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\ca-ethiopic-amete-alem.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\ca-ethiopic.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\ca-generic.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\ca-gregorian.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\ca-hebrew.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\ca-indian.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\ca-islamic-civil.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\ca-islamic-rgsa.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\ca-islamic-tbla.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\ca-islamic-umalqura.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\ca-islamic.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\ca-japanese.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\ca-persian.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\ca-roc.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\characters.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\contextTransforms.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\currencies.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\dateFields.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\delimiters.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\languages.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\layout.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\listPatterns.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\localeDisplayNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\measurementSystemNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\numbers.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\posix.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\scripts.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\territories.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\timeZoneNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\transformNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\units.json" />
+    <Content Include="Assets\vendors\cldrData\main\en\variants.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\ca-buddhist.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\ca-chinese.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\ca-coptic.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\ca-dangi.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\ca-ethiopic-amete-alem.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\ca-ethiopic.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\ca-generic.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\ca-gregorian.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\ca-hebrew.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\ca-indian.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\ca-islamic-civil.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\ca-islamic-rgsa.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\ca-islamic-tbla.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\ca-islamic-umalqura.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\ca-islamic.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\ca-japanese.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\ca-persian.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\ca-roc.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\characters.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\contextTransforms.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\currencies.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\dateFields.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\delimiters.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\languages.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\layout.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\listPatterns.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\localeDisplayNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\measurementSystemNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\numbers.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\posix.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\scripts.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\territories.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\timeZoneNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\transformNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\units.json" />
+    <Content Include="Assets\vendors\cldrData\main\ru\variants.json" />
+    <Content Include="Assets\vendors\cldrData\supplemental\likelySubtags.json" />
+    <Content Include="Assets\vendors\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\vendors\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\vendors\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\vendors\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\vendors\fonts\FontAwesome.otf" />
+    <Content Include="Assets\vendors\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\vendors\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\vendors\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\vendors\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Assets\vendors\cldrData\main\zh\variants.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\units.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\transformNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\timeZoneNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\territories.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\scripts.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\posix.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\numbers.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\measurementSystemNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\localeDisplayNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\listPatterns.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\layout.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\languages.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\delimiters.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\dateFields.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\currencies.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\characters.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\ca-roc.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\ca-persian.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\ca-japanese.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\ca-islamic.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\ca-islamic-umalqura.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\ca-islamic-tbla.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\ca-islamic-rgsa.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\ca-islamic-civil.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\ca-indian.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\ca-hebrew.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\ca-gregorian.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\ca-generic.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\ca-ethiopic.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\ca-ethiopic-amete-alem.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\ca-dangi.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\ca-coptic.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\ca-chinese.json" />
+    <Content Include="Assets\vendors\cldrData\main\zh\ca-buddhist.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\variants.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\units.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\transformNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\timeZoneNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\territories.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\scripts.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\posix.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\numbers.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\measurementSystemNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\localeDisplayNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\listPatterns.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\layout.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\languages.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\delimiters.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\dateFields.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\currencies.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\contextTransforms.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\characters.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\ca-roc.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\ca-persian.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\ca-japanese.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\ca-islamic.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\ca-islamic-umalqura.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\ca-islamic-tbla.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\ca-islamic-rgsa.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\ca-islamic-civil.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\ca-indian.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\ca-hebrew.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\ca-gregorian.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\ca-generic.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\ca-ethiopic.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\ca-ethiopic-amete-alem.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\ca-dangi.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\ca-coptic.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\ca-chinese.json" />
+    <Content Include="Assets\vendors\cldrData\main\uk\ca-buddhist.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\variants.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\units.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\transformNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\timeZoneNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\territories.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\scripts.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\posix.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\numbers.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\measurementSystemNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\localeDisplayNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\listPatterns.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\layout.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\languages.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\delimiters.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\dateFields.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\currencies.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\contextTransforms.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\characters.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\ca-roc.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\ca-persian.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\ca-japanese.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\ca-islamic.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\ca-islamic-umalqura.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\ca-islamic-tbla.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\ca-islamic-rgsa.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\ca-islamic-civil.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\ca-indian.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\ca-hebrew.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\ca-gregorian.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\ca-generic.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\ca-ethiopic.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\ca-ethiopic-amete-alem.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\ca-dangi.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\ca-coptic.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\ca-chinese.json" />
+    <Content Include="Assets\vendors\cldrData\main\pt\ca-buddhist.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\variants.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\units.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\transformNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\timeZoneNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\territories.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\scripts.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\posix.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\numbers.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\measurementSystemNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\localeDisplayNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\listPatterns.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\layout.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\languages.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\delimiters.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\dateFields.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\currencies.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\contextTransforms.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\characters.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\ca-roc.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\ca-persian.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\ca-japanese.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\ca-islamic.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\ca-islamic-umalqura.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\ca-islamic-tbla.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\ca-islamic-rgsa.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\ca-islamic-civil.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\ca-indian.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\ca-hebrew.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\ca-gregorian.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\ca-generic.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\ca-ethiopic.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\ca-ethiopic-amete-alem.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\ca-dangi.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\ca-coptic.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\ca-chinese.json" />
+    <Content Include="Assets\vendors\cldrData\main\pl\ca-buddhist.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\variants.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\units.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\transformNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\timeZoneNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\territories.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\scripts.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\posix.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\numbers.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\measurementSystemNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\localeDisplayNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\listPatterns.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\layout.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\languages.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\delimiters.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\dateFields.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\currencies.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\contextTransforms.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\characters.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\ca-roc.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\ca-persian.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\ca-japanese.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\ca-islamic.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\ca-islamic-umalqura.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\ca-islamic-tbla.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\ca-islamic-rgsa.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\ca-islamic-civil.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\ca-indian.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\ca-hebrew.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\ca-gregorian.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\ca-generic.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\ca-ethiopic.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\ca-ethiopic-amete-alem.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\ca-dangi.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\ca-coptic.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\ca-chinese.json" />
+    <Content Include="Assets\vendors\cldrData\main\it\ca-buddhist.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\variants.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\units.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\transformNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\timeZoneNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\territories.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\scripts.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\posix.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\numbers.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\measurementSystemNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\localeDisplayNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\listPatterns.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\layout.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\languages.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\delimiters.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\dateFields.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\currencies.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\contextTransforms.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\characters.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\ca-roc.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\ca-persian.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\ca-japanese.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\ca-islamic.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\ca-islamic-umalqura.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\ca-islamic-tbla.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\ca-islamic-rgsa.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\ca-islamic-civil.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\ca-indian.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\ca-hebrew.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\ca-gregorian.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\ca-generic.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\ca-ethiopic.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\ca-ethiopic-amete-alem.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\ca-dangi.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\ca-coptic.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\ca-chinese.json" />
+    <Content Include="Assets\vendors\cldrData\main\fr\ca-buddhist.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\variants.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\units.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\transformNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\timeZoneNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\territories.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\scripts.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\posix.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\numbers.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\measurementSystemNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\localeDisplayNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\listPatterns.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\layout.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\languages.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\delimiters.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\dateFields.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\currencies.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\contextTransforms.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\characters.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\ca-roc.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\ca-persian.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\ca-japanese.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\ca-islamic.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\ca-islamic-umalqura.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\ca-islamic-tbla.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\ca-islamic-rgsa.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\ca-islamic-civil.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\ca-indian.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\ca-hebrew.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\ca-gregorian.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\ca-generic.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\ca-ethiopic.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\ca-ethiopic-amete-alem.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\ca-dangi.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\ca-coptic.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\ca-chinese.json" />
+    <Content Include="Assets\vendors\cldrData\main\es\ca-buddhist.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\variants.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\units.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\transformNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\timeZoneNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\territories.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\scripts.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\posix.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\numbers.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\measurementSystemNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\localeDisplayNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\listPatterns.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\layout.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\languages.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\delimiters.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\dateFields.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\currencies.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\characters.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\ca-roc.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\ca-persian.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\ca-japanese.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\ca-islamic.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\ca-islamic-umalqura.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\ca-islamic-tbla.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\ca-islamic-rgsa.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\ca-islamic-civil.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\ca-indian.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\ca-hebrew.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\ca-gregorian.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\ca-generic.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\ca-ethiopic.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\ca-ethiopic-amete-alem.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\ca-dangi.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\ca-coptic.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\ca-chinese.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\ca-buddhist.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\variants.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\units.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\transformNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\timeZoneNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\territories.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\scripts.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\posix.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\numbers.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\measurementSystemNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\localeDisplayNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\listPatterns.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\layout.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\languages.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\delimiters.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\dateFields.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\currencies.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\contextTransforms.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\characters.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\ca-roc.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\ca-persian.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\ca-japanese.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\ca-islamic.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\ca-islamic-umalqura.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\ca-islamic-tbla.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\ca-islamic-rgsa.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\ca-islamic-civil.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\ca-indian.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\ca-hebrew.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\ca-gregorian.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\ca-generic.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\ca-ethiopic.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\ca-ethiopic-amete-alem.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\ca-dangi.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\ca-coptic.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\ca-chinese.json" />
+    <Content Include="Assets\vendors\cldrData\main\cs\ca-buddhist.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\variants.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\units.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\timeZoneNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\territories.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\scripts.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\posix.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\numbers.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\measurementSystemNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\localeDisplayNames.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\listPatterns.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\layout.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\languages.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\delimiters.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\dateFields.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\currencies.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\characters.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\ca-roc.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\ca-persian.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\ca-japanese.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\ca-islamic.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\ca-islamic-umalqura.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\ca-islamic-tbla.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\ca-islamic-rgsa.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\ca-islamic-civil.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\ca-indian.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\ca-hebrew.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\ca-gregorian.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\ca-generic.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\ca-ethiopic.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\ca-ethiopic-amete-alem.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\ca-dangi.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\ca-coptic.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\ca-chinese.json" />
+    <Content Include="Assets\vendors\cldrData\main\be\ca-buddhist.json" />
+    <Content Include="Assets\vendors\cldrData\main\de\contextTransforms.json" />
     <None Include="Scripts\jquery-1.10.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
